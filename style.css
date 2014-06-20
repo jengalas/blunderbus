@@ -1,7 +1,7 @@
 /*
 Theme Name: Surveymarks
 Theme URI: http://themekraft.com/tk/
-Author: ThemeKraft
+Author: Zhanna
 Author URI: http://themekraft.com/
 Description: Hi, I am the ultra minimal starter theme Surveymarks, ready for your next awesome WordPress project! I am the most seamless and minimalistic integration of Twitter Bootstrap Framework into the _s starter theme from Automattic, the guys behind WordPress.
 Version: 1.1.2
@@ -131,6 +131,11 @@ object {
 
 
 /* Content */
+
+body { background-color: #e8ddd4; }
+
+.container { background: #fffafa; border-right: 1px solid #eee; border-left: 1px solid #eee; }
+
 .main-content-inner {
 	padding-bottom: 1.5em;
 }
@@ -138,11 +143,35 @@ object {
 	margin: 0 0 1.5em;
 }
 
+.small-map { float: right; }
 
 /* Clearing */
 .clear {
 	clear: both;
 }
+
+
+.navbar { background-color: #FFFAFA}
+.navbar { border-radius: 0; border-left: none; border-right: none; }
+.navbar .navbar-nav>.active>a:hover,.navbar .navbar-nav>li>a:hover, .navbar .navbar-nav>li>a:focus { background-color: #825E65}
+.navbar .navbar-nav>.active>a,.navbar .navbar-nav>.open>a,.navbar .navbar-nav>.open>a, .navbar .navbar-nav>.open>a:hover,.navbar .navbar-nav>.open>a, .navbar .navbar-nav>.open>a:hover, .navbar .navbar-nav>.open>a:focus { background-color: #825E65}
+.dropdown-menu { background-color: #FFFAFA}
+.dropdown-menu>li>a:hover, .dropdown-menu>li>a:focus { background-color: #825E65}
+.navbar { background-image: none; }
+.dropdown-menu>li>a:hover, .dropdown-menu>li>a:focus { background-image: none; }
+.navbar .navbar-brand { color: #999999}
+.navbar .navbar-brand:hover { color: #825E65}
+.navbar .navbar-nav>li>a { color: #777}
+.navbar .navbar-nav>li>a:hover, .navbar .navbar-nav>li>a:focus { color: #FFFFFF}
+.navbar .navbar-nav>.active>a,.navbar .navbar-nav>.open>a, .navbar .navbar-nav>.open>a:hover, .navbar .navbar-nav>.open>a:focus { color: #FFFAFA}
+.navbar .navbar-nav>.active>a:hover, .navbar .navbar-nav>.active>a:focus { color: #FFFFFF}
+.dropdown-menu>li>a { color: #333333}
+.dropdown-menu>li>a:hover, .dropdown-menu>li>a:focus { color: #FFFFFF}
+.navbar .navbar-nav>.dropdown>a .caret { border-top-color: #999999}
+.navbar .navbar-nav>.dropdown>a:hover .caret { border-top-color: #FFFFFF}
+.navbar .navbar-nav>.dropdown>a .caret { border-bottom-color: #999999}
+.navbar .navbar-nav>.dropdown>a:hover .caret { border-bottom-color: #FFFFFF}
+
 
 
 /* Here some needed widget styles
