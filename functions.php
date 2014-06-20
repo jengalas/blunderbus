@@ -147,3 +147,11 @@ require get_template_directory() . '/includes/jetpack.php';
  * Load custom WordPress nav walker.
  */
 require get_template_directory() . '/includes/bootstrap-wp-navwalker.php';
+
+add_action( 'init', 'my_deregister_heartbeat', 1 );
+function my_deregister_heartbeat() {
+	global $pagenow;
+
+	if ( 'post.php' != $pagenow && 'post-new.php' != $pagenow )
+		wp_deregister_script('heartbeat'); 
+} 
