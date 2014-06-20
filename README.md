@@ -1,4 +1,4 @@
-== _tk ==
+== Surveymarks ==
 =========
 
 ThemeKraft Starter Theme
@@ -25,17 +25,17 @@ If you want to keep it simple, head over to http://underscores.me and generate y
 
 If you want to set things up manually, download `_tk` from github. The first thing you want to do is copy the `_tk` directory and change the name to something else - Like, say, `megatherium` - then you'll need to do a three-step find and replace on the name in all the templates.
 
-1. Search for `'_tk'` (inside single quotations) to capture the text domain.
-2. Search for `_tk_` to capture all the function names.
+1. Search for `'surveymarks'` (inside single quotations) to capture the text domain.
+2. Search for `surveymarks_` to capture all the function names.
 3. Search for <code>&nbsp;_tk</code> (with a space before it) to capture DocBlocks.
-4. Search for `_tk-` to capture prefixed handles.
+4. Search for `surveymarks-` to capture prefixed handles.
 
 OR
 
-* Search for: `'_tk'` and replace with: `'megatherium'`
-* Search for: `_tk_` and replace with: `megatherium_`
+* Search for: `'surveymarks'` and replace with: `'megatherium'`
+* Search for: `surveymarks_` and replace with: `megatherium_`
 * Search for: <code>&nbsp;_tk</code> and replace with: <code>&nbsp;Megatherium</code>
-* Search for: `_tk-` and replace with: `megatherium-`
+* Search for: `surveymarks-` and replace with: `megatherium-`
 
 Then, update the stylesheet header in style.css and the links in footer.php with your own information. Next, update or delete this readme.
 
