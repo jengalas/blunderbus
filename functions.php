@@ -118,23 +118,6 @@ function surveymarks_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'surveymarks_scripts' );
 
-/**
- * Enqueue fonts
- */
-
-function wpse_google_webfonts() {
-    $protocol = is_ssl() ? 'https' : 'http';
-    $query_args = array(
-        'family' => 'Open+Sans:400italic,700italic,400,700|Open+Sans+Condensed:300',
-        'subset' => $subsets,
-    );
-
-    wp_enqueue_style('google-webfonts',
-        add_query_arg($query_args, "$protocol://fonts.googleapis.com/css" ),
-        array(), null);
-}
-
-add_action( 'wp_enqueue_scripts', 'wpse_google_webfonts' );
 
 /**
  * Implement the Custom Header feature.
