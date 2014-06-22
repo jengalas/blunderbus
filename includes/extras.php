@@ -86,3 +86,67 @@ function wpse_google_webfonts() {
 }
 
 add_action( 'wp_enqueue_scripts', 'wpse_google_webfonts' );
+
+/**
+ * Puts location taxonomy terms in order State, County, Quad
+ */
+
+function order_location_terms() {    
+   	 
+	 $taxonomy_slug = "location";			 
+	 $terms = get_the_terms( $post->ID, $taxonomy_slug);
+	 
+    // if $terms is not array or it's empty don't proceed
+    if ( ! is_array( $terms ) || empty( $terms ) ) {
+        return false;
+    }
+
+    foreach ( $terms as $term ) {
+        // if the term has a parent, set the child term as attribute in parent term
+        if ( $term->parent != 0 )  {
+            $terms[$term->parent]->child = $term;   
+        } else {
+            // record the parent term
+            $parent = $term;
+        }
+    }
+
+		$state_link = '/'.$taxonomy_slug.'/'.$parent->slug;
+		$county_link = $state_link .'/' . $parent->child->slug;
+		$quad_link = $county_link . '/' . $parent->child->child->slug; 
+		
+		return "<a href=$state_link>$parent->name</a> - <a href=$county_link>".$parent->child->name."</a> - <a href=$quad_link>".$parent->child->child->name."</a>";
+		
+}
+
+add_shortcode( 'location_tax_inorder', 'order_location_terms' );
+
+function order_location_terms_nolink() {    /*  Puts location taxonomy terms in order State, County, Quad */
+   	 
+	 $taxonomy_slug = "location";			 
+	 $terms = get_the_terms( $post->ID, $taxonomy_slug);
+	 
+    // if $terms is not array or it's empty don't proceed
+    if ( ! is_array( $terms ) || empty( $terms ) ) {
+        return false;
+    }
+
+    foreach ( $terms as $term ) {
+        // if the term has a parent, set the child term as attribute in parent term
+        if ( $term->parent != 0 )  {
+            $terms[$term->parent]->child = $term;   
+        } else {
+            // record the parent term
+            $parent = $term;
+        }
+    }
+
+		$state_link = '/'.$taxonomy_slug.'/'.$parent->slug;
+		$county_link = $state_link .'/' . $parent->child->slug;
+		$quad_link = $county_link . '/' . $parent->child->child->slug; 
+		
+		return $parent->name .' - '. $parent->child->name .' - '. $parent->child->child->name;
+		
+}
+
+add_shortcode( 'location_tax_inorder_nolink', 'order_location_terms_nolink' );
