@@ -48,7 +48,7 @@ function surveymarks_setup() {
 		 * Setup the WordPress core custom background feature.
 		*/
 		add_theme_support( 'custom-background', apply_filters( 'surveymarks_custom_background_args', array(
-			'default-color' => 'e8ddd4',
+			'default-color' => '#e8ddd4',
 			'default-image' => '',
 		) ) );
 
