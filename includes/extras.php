@@ -150,3 +150,15 @@ function order_location_terms_nolink() {    /*  Puts location taxonomy terms in 
 }
 
 add_shortcode( 'location_tax_inorder_nolink', 'order_location_terms_nolink' );
+
+/**
+ * Deregister Heartbeat in attempt to investigate server load
+ */
+
+add_action( 'init', 'my_deregister_heartbeat', 1 );
+function my_deregister_heartbeat() {
+	global $pagenow;
+
+	if ( 'post.php' != $pagenow && 'post-new.php' != $pagenow )
+		wp_deregister_script('heartbeat'); 
+} 
