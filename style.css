@@ -133,7 +133,9 @@ object {
 
 /* Content */
 
-.container { background: #fffafa; border-right: 1px solid #eee; border-left: 1px solid #eee; }
+.container { background-color: #fffafa; border-right: 1px solid #eee; border-left: 1px solid #eee; }
+
+footer .container { background-color: #7d593f; }
 
 .main-content-inner {
 	padding-bottom: 1.5em;
@@ -149,6 +151,7 @@ object {
 	clear: both;
 }
 
+/* Navigation */
 
 .navbar { background-color: #FFFAFA}
 .navbar { border-radius: 0; border-left: none; border-right: none; }
