@@ -132,8 +132,6 @@ object {
 
 /* Content */
 
-body { background-color: #e8ddd4; }
-
 .container { background: #fffafa; border-right: 1px solid #eee; border-left: 1px solid #eee; }
 
 .main-content-inner {
