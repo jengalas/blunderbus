@@ -97,5 +97,4 @@ get_header(); ?>
 
 	</div><!-- .content-padder -->
 
-<?php get_sidebar(); ?>
 <?php get_footer(); ?>

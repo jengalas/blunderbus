@@ -24,5 +24,4 @@ get_header(); ?>
 
 	</section><!-- .content-padder -->
 
-<?php get_sidebar(); ?>
 <?php get_footer(); ?>

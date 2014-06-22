@@ -16,7 +16,7 @@
 	<div class="container">
 		<div class="row">
 			<div class="site-footer-inner col-sm-12">
-
+				<?php get_sidebar(); ?>
 				<div class="site-info">
 					<?php do_action( 'surveymarks_credits' ); ?>
 					<a href="http://wordpress.org/" title="<?php esc_attr_e( 'A Semantic Personal Publishing Platform', 'surveymarks' ); ?>" rel="generator"><?php printf( __( 'Proudly powered by %s', 'surveymarks' ), 'WordPress' ); ?></a>
