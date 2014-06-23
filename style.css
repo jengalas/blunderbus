@@ -133,7 +133,7 @@ object {
 
 /* Content */
 
-.container { background-color: #fffafa; border-right: 1px solid #eee; border-left: 1px solid #eee; }
+.container { background-color: #fffafa; border-right: 1px solid #d2bbaa; border-left: 1px solid #d2bbaa; }
 
 footer .container { background-color: #7d593f; }
 
