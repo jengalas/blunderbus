@@ -2,7 +2,7 @@
 /**
  * The template for displaying Search Results pages.
  *
- * @package Surveymarks
+ * @package Blunderbus
  */
 
 get_header(); ?>
@@ -10,7 +10,7 @@ get_header(); ?>
 	<?php if ( have_posts() ) : ?>
 
 		<header class="page-header">
-			<h2 class="page-title"><?php printf( __( 'Search Results for: %s', 'surveymarks' ), '<span>' . get_search_query() . '</span>' ); ?></h2>
+			<h2 class="page-title"><?php printf( __( 'Search Results for: %s', 'blunderbus' ), '<span>' . get_search_query() . '</span>' ); ?></h2>
 		</header><!-- .page-header -->
 
 		<?php // start the loop. ?>
@@ -20,7 +20,7 @@ get_header(); ?>
 
 		<?php endwhile; ?>
 
-		<?php surveymarks_content_nav( 'nav-below' ); ?>
+		<?php blunderbus_content_nav( 'nav-below' ); ?>
 
 	<?php else : ?>
 

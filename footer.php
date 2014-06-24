@@ -4,7 +4,7 @@
  *
  * Contains the closing of the id=main div and all content after
  *
- * @package Surveymarks
+ * @package Blunderbus
  */
 ?>
 			</div><!-- close .*-inner (main-content or sidebar, depending if sidebar is used) -->
@@ -18,10 +18,10 @@
 			<div class="site-footer-inner col-sm-12">
 				<?php get_sidebar(); ?>
 				<div class="site-info">
-					<?php do_action( 'surveymarks_credits' ); ?>
-					<a href="http://wordpress.org/" title="<?php esc_attr_e( 'A Semantic Personal Publishing Platform', 'surveymarks' ); ?>" rel="generator"><?php printf( __( 'Proudly powered by %s', 'surveymarks' ), 'WordPress' ); ?></a>
+					<?php do_action( 'blunderbus_credits' ); ?>
+					<a href="http://wordpress.org/" title="<?php esc_attr_e( 'A Semantic Personal Publishing Platform', 'blunderbus' ); ?>" rel="generator"><?php printf( __( 'Proudly powered by %s', 'blunderbus' ), 'WordPress' ); ?></a>
 					<span class="sep"> | </span>
-					<?php printf( __( 'Theme: %1$s by %2$s.', 'surveymarks' ), 'surveymarks', '<a href="http://jennifergalas.com/" rel="designer">Zhanna</a>' ); ?>
+					<?php printf( __( 'Theme: %1$s by %2$s.', 'blunderbus' ), 'blunderbus', '<a href="http://jennifergalas.com/" rel="designer">Zhanna</a>' ); ?>
 				</div><!-- close .site-info -->
 
 			</div>

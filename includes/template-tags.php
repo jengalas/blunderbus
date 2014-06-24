@@ -4,14 +4,14 @@
  *
  * Eventually, some of the functionality here could be replaced by core features
  *
- * @package Surveymarks
+ * @package Blunderbus
  */
 
-if ( ! function_exists( 'surveymarks_content_nav' ) ) :
+if ( ! function_exists( 'blunderbus_content_nav' ) ) :
 /**
  * Display navigation to next/previous pages when applicable
  */
-function surveymarks_content_nav( $nav_id ) {
+function blunderbus_content_nav( $nav_id ) {
 	global $wp_query, $post;
 
 	// Don't print empty markup on single pages if there's nowhere to navigate.
@@ -31,22 +31,22 @@ function surveymarks_content_nav( $nav_id ) {
 
 	?>
 	<nav role="navigation" id="<?php echo esc_attr( $nav_id ); ?>" class="<?php echo $nav_class; ?>">
-		<h1 class="screen-reader-text"><?php _e( 'Post navigation', 'surveymarks' ); ?></h1>
+		<h1 class="screen-reader-text"><?php _e( 'Post navigation', 'blunderbus' ); ?></h1>
 		<ul class="pager">
 
 		<?php if ( is_single() ) : // navigation links for single posts ?>
 
-			<?php previous_post_link( '<li class="nav-previous previous">%link</li>', '<span class="meta-nav">' . _x( '&larr;', 'Previous post link', 'surveymarks' ) . '</span> %title' ); ?>
-			<?php next_post_link( '<li class="nav-next next">%link</li>', '%title <span class="meta-nav">' . _x( '&rarr;', 'Next post link', 'surveymarks' ) . '</span>' ); ?>
+			<?php previous_post_link( '<li class="nav-previous previous">%link</li>', '<span class="meta-nav">' . _x( '&larr;', 'Previous post link', 'blunderbus' ) . '</span> %title' ); ?>
+			<?php next_post_link( '<li class="nav-next next">%link</li>', '%title <span class="meta-nav">' . _x( '&rarr;', 'Next post link', 'blunderbus' ) . '</span>' ); ?>
 
 		<?php elseif ( $wp_query->max_num_pages > 1 && ( is_home() || is_archive() || is_search() ) ) : // navigation links for home, archive, and search pages ?>
 
 			<?php if ( get_next_posts_link() ) : ?>
-			<li class="nav-previous previous"><?php next_posts_link( __( '<span class="meta-nav">&larr;</span> Older posts', 'surveymarks' ) ); ?></li>
+			<li class="nav-previous previous"><?php next_posts_link( __( '<span class="meta-nav">&larr;</span> Older posts', 'blunderbus' ) ); ?></li>
 			<?php endif; ?>
 
 			<?php if ( get_previous_posts_link() ) : ?>
-			<li class="nav-next next"><?php previous_posts_link( __( 'Newer posts <span class="meta-nav">&rarr;</span>', 'surveymarks' ) ); ?></li>
+			<li class="nav-next next"><?php previous_posts_link( __( 'Newer posts <span class="meta-nav">&rarr;</span>', 'blunderbus' ) ); ?></li>
 			<?php endif; ?>
 
 		<?php endif; ?>
@@ -55,22 +55,22 @@ function surveymarks_content_nav( $nav_id ) {
 	</nav><!-- #<?php echo esc_html( $nav_id ); ?> -->
 	<?php
 }
-endif; // surveymarks_content_nav
+endif; // blunderbus_content_nav
 
-if ( ! function_exists( 'surveymarks_comment' ) ) :
+if ( ! function_exists( 'blunderbus_comment' ) ) :
 /**
  * Template for comments and pingbacks.
  *
  * Used as a callback by wp_list_comments() for displaying the comments.
  */
-function surveymarks_comment( $comment, $args, $depth ) {
+function blunderbus_comment( $comment, $args, $depth ) {
 	$GLOBALS['comment'] = $comment;
 
 	if ( 'pingback' == $comment->comment_type || 'trackback' == $comment->comment_type ) : ?>
 
 	<li id="comment-<?php comment_ID(); ?>" <?php comment_class( 'media' ); ?>>
 		<div class="comment-body">
-			<?php _e( 'Pingback:', 'surveymarks' ); ?> <?php comment_author_link(); ?> <?php edit_comment_link( __( 'Edit', 'surveymarks' ), '<span class="edit-link">', '</span>' ); ?>
+			<?php _e( 'Pingback:', 'blunderbus' ); ?> <?php comment_author_link(); ?> <?php edit_comment_link( __( 'Edit', 'blunderbus' ), '<span class="edit-link">', '</span>' ); ?>
 		</div>
 
 	<?php else : ?>
@@ -85,19 +85,19 @@ function surveymarks_comment( $comment, $args, $depth ) {
 				<div class="media-body-wrap panel panel-default">
 
 					<div class="panel-heading">
-						<h5 class="media-heading"><?php printf( __( '%s <span class="says">says:</span>', 'surveymarks' ), sprintf( '<cite class="fn">%s</cite>', get_comment_author_link() ) ); ?></h5>
+						<h5 class="media-heading"><?php printf( __( '%s <span class="says">says:</span>', 'blunderbus' ), sprintf( '<cite class="fn">%s</cite>', get_comment_author_link() ) ); ?></h5>
 						<div class="comment-meta">
 							<a href="<?php echo esc_url( get_comment_link( $comment->comment_ID ) ); ?>">
 								<time datetime="<?php comment_time( 'c' ); ?>">
-									<?php printf( _x( '%1$s at %2$s', '1: date, 2: time', 'surveymarks' ), get_comment_date(), get_comment_time() ); ?>
+									<?php printf( _x( '%1$s at %2$s', '1: date, 2: time', 'blunderbus' ), get_comment_date(), get_comment_time() ); ?>
 								</time>
 							</a>
-							<?php edit_comment_link( __( '<span style="margin-left: 5px;" class="glyphicon glyphicon-edit"></span> Edit', 'surveymarks' ), '<span class="edit-link">', '</span>' ); ?>
+							<?php edit_comment_link( __( '<span style="margin-left: 5px;" class="glyphicon glyphicon-edit"></span> Edit', 'blunderbus' ), '<span class="edit-link">', '</span>' ); ?>
 						</div>
 					</div>
 
 					<?php if ( '0' == $comment->comment_approved ) : ?>
-						<p class="comment-awaiting-moderation"><?php _e( 'Your comment is awaiting moderation.', 'surveymarks' ); ?></p>
+						<p class="comment-awaiting-moderation"><?php _e( 'Your comment is awaiting moderation.', 'blunderbus' ); ?></p>
 					<?php endif; ?>
 
 					<div class="comment-content panel-body">
@@ -124,15 +124,15 @@ function surveymarks_comment( $comment, $args, $depth ) {
 	<?php
 	endif;
 }
-endif; // ends check for surveymarks_comment()
+endif; // ends check for blunderbus_comment()
 
-if ( ! function_exists( 'surveymarks_the_attached_image' ) ) :
+if ( ! function_exists( 'blunderbus_the_attached_image' ) ) :
 /**
  * Prints the attached image with a link to the next attached image.
  */
-function surveymarks_the_attached_image() {
+function blunderbus_the_attached_image() {
 	$post                = get_post();
-	$attachment_size     = apply_filters( 'surveymarks_attachment_size', array( 1200, 1200 ) );
+	$attachment_size     = apply_filters( 'blunderbus_attachment_size', array( 1200, 1200 ) );
 	$next_attachment_url = wp_get_attachment_url();
 
 	/**
@@ -178,11 +178,11 @@ function surveymarks_the_attached_image() {
 }
 endif;
 
-if ( ! function_exists( 'surveymarks_posted_on' ) ) :
+if ( ! function_exists( 'blunderbus_posted_on' ) ) :
 /**
  * Prints HTML with meta information for the current post-date/time and author.
  */
-function surveymarks_posted_on() {
+function blunderbus_posted_on() {
 	$time_string = '<time class="entry-date published" datetime="%1$s">%2$s</time>';
 
 	$time_string = sprintf( $time_string,
@@ -207,14 +207,14 @@ function surveymarks_posted_on() {
 			esc_attr( get_the_time() ),
 			$time_string_update
 		);
-		$time_string .= __(', updated on ', 'surveymarks') . $time_string_update;
+		$time_string .= __(', updated on ', 'blunderbus') . $time_string_update;
 	}
 
-	printf( __( '<span class="posted-on">Posted on %1$s</span><span class="byline"> by %2$s</span>', 'surveymarks' ),
+	printf( __( '<span class="posted-on">Posted on %1$s</span><span class="byline"> by %2$s</span>', 'blunderbus' ),
 		$time_string,
 		sprintf( '<span class="author vcard"><a class="url fn n" href="%1$s" title="%2$s">%3$s</a></span>',
 			esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ),
-			esc_attr( sprintf( __( 'View all posts by %s', 'surveymarks' ), get_the_author() ) ),
+			esc_attr( sprintf( __( 'View all posts by %s', 'blunderbus' ), get_the_author() ) ),
 			esc_html( get_the_author() )
 		)
 	);
@@ -224,7 +224,7 @@ endif;
 /**
  * Returns true if a blog has more than 1 category
  */
-function surveymarks_categorized_blog() {
+function blunderbus_categorized_blog() {
 	if ( false === ( $all_the_cool_cats = get_transient( 'all_the_cool_cats' ) ) ) {
 		// Create an array of all the categories that are attached to posts
 		$all_the_cool_cats = get_categories( array(
@@ -238,20 +238,20 @@ function surveymarks_categorized_blog() {
 	}
 
 	if ( '1' != $all_the_cool_cats ) {
-		// This blog has more than 1 category so surveymarks_categorized_blog should return true
+		// This blog has more than 1 category so blunderbus_categorized_blog should return true
 		return true;
 	} else {
-		// This blog has only 1 category so surveymarks_categorized_blog should return false
+		// This blog has only 1 category so blunderbus_categorized_blog should return false
 		return false;
 	}
 }
 
 /**
- * Flush out the transients used in surveymarks_categorized_blog
+ * Flush out the transients used in blunderbus_categorized_blog
  */
-function surveymarks_category_transient_flusher() {
+function blunderbus_category_transient_flusher() {
 	// Like, beat it. Dig?
 	delete_transient( 'all_the_cool_cats' );
 }
-add_action( 'edit_category', 'surveymarks_category_transient_flusher' );
-add_action( 'save_post',     'surveymarks_category_transient_flusher' );
+add_action( 'edit_category', 'blunderbus_category_transient_flusher' );
+add_action( 'save_post',     'blunderbus_category_transient_flusher' );

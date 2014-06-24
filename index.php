@@ -8,7 +8,7 @@
  * E.g., it puts together the home page when no home.php file exists.
  * Learn more: http://codex.wordpress.org/Template_Hierarchy
  *
- * @package Surveymarks
+ * @package Blunderbus
  */
 
 get_header(); ?>
@@ -28,7 +28,7 @@ get_header(); ?>
 
 		<?php endwhile; ?>
 
-		<?php surveymarks_content_nav( 'nav-below' ); ?>
+		<?php blunderbus_content_nav( 'nav-below' ); ?>
 
 	<?php else : ?>
 

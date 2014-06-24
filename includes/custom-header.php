@@ -13,41 +13,41 @@
 	<?php } // if ( ! empty( $header_image ) ) ?>
 
  *
- * @package Surveymarks
+ * @package Blunderbus
  */
 
 /**
  * Setup the WordPress core custom header feature.
  *
- * @uses surveymarks_header_style()
- * @uses surveymarks_admin_header_style()
- * @uses surveymarks_admin_header_image()
+ * @uses blunderbus_header_style()
+ * @uses blunderbus_admin_header_style()
+ * @uses blunderbus_admin_header_image()
  *
- * @package Surveymarks
+ * @package Blunderbus
  */
-function surveymarks_custom_header_setup() {
+function blunderbus_custom_header_setup() {
 	if ( function_exists( 'add_theme_support' ) ) {
-		add_theme_support( 'custom-header', apply_filters( 'surveymarks_custom_header_args', array(
+		add_theme_support( 'custom-header', apply_filters( 'blunderbus_custom_header_args', array(
 			'default-image'          => '',
 			'default-text-color'     => '000',
 			'width'                  => 1170,
 			'height'                 => 250,
 			'flex-height'            => true,
-			'wp-head-callback'       => 'surveymarks_header_style',
-			'admin-head-callback'    => 'surveymarks_admin_header_style',
-			'admin-preview-callback' => 'surveymarks_admin_header_image',
+			'wp-head-callback'       => 'blunderbus_header_style',
+			'admin-head-callback'    => 'blunderbus_admin_header_style',
+			'admin-preview-callback' => 'blunderbus_admin_header_image',
 		) ) );
 	}
 }
-add_action( 'after_setup_theme', 'surveymarks_custom_header_setup' );
+add_action( 'after_setup_theme', 'blunderbus_custom_header_setup' );
 
-if ( ! function_exists( 'surveymarks_header_style' ) ) :
+if ( ! function_exists( 'blunderbus_header_style' ) ) :
 /**
  * Styles the header image and text displayed on the blog
  *
- * @see surveymarks_custom_header_setup().
+ * @see blunderbus_custom_header_setup().
  */
-function surveymarks_header_style() {
+function blunderbus_header_style() {
 	$header_text_color = get_header_textcolor();
 
 	// If no custom options for text are set, let's bail
@@ -79,15 +79,15 @@ function surveymarks_header_style() {
 	</style>
 	<?php
 }
-endif; // surveymarks_header_style
+endif; // blunderbus_header_style
 
-if ( ! function_exists( 'surveymarks_admin_header_style' ) ) :
+if ( ! function_exists( 'blunderbus_admin_header_style' ) ) :
 /**
  * Styles the header image displayed on the Appearance > Header admin panel.
  *
- * @see surveymarks_custom_header_setup().
+ * @see blunderbus_custom_header_setup().
  */
-function surveymarks_admin_header_style() {
+function blunderbus_admin_header_style() {
 ?>
 	<style type="text/css">
 		.appearance_page_custom-header #headimg {
@@ -107,15 +107,15 @@ function surveymarks_admin_header_style() {
 	</style>
 <?php
 }
-endif; // surveymarks_admin_header_style
+endif; // blunderbus_admin_header_style
 
-if ( ! function_exists( 'surveymarks_admin_header_image' ) ) :
+if ( ! function_exists( 'blunderbus_admin_header_image' ) ) :
 /**
  * Custom header image markup displayed on the Appearance > Header admin panel.
  *
- * @see surveymarks_custom_header_setup().
+ * @see blunderbus_custom_header_setup().
  */
-function surveymarks_admin_header_image() {
+function blunderbus_admin_header_image() {
 	$style        = sprintf( ' style="color:#%s;"', get_header_textcolor() );
 	$header_image = get_header_image();
 ?>
@@ -128,4 +128,4 @@ function surveymarks_admin_header_image() {
 	</div>
 <?php
 }
-endif; // surveymarks_admin_header_image
+endif; // blunderbus_admin_header_image

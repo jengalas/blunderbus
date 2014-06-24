@@ -2,7 +2,7 @@
 /**
  * The sidebar containing the main widget area
  *
- * @package Surveymarks
+ * @package Blunderbus
  */
 ?>
 
@@ -21,14 +21,14 @@
 				</aside>
 
 				<aside id="archives" class="widget widget_archive">
-					<h3 class="widget-title"><?php _e( 'Archives', 'surveymarks' ); ?></h3>
+					<h3 class="widget-title"><?php _e( 'Archives', 'blunderbus' ); ?></h3>
 					<ul>
 						<?php wp_get_archives( array( 'type' => 'monthly' ) ); ?>
 					</ul>
 				</aside>
 
 				<aside id="meta" class="widget widget_meta">
-					<h3 class="widget-title"><?php _e( 'Meta', 'surveymarks' ); ?></h3>
+					<h3 class="widget-title"><?php _e( 'Meta', 'blunderbus' ); ?></h3>
 					<ul>
 						<?php wp_register(); ?>
 						<li><?php wp_loginout(); ?></li>

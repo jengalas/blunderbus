@@ -4,22 +4,22 @@
  *
  * Eventually, some of the functionality here could be replaced by core features
  *
- * @package Surveymarks
+ * @package Blunderbus
  */
 
 /**
  * Get our wp_nav_menu() fallback, wp_page_menu(), to show a home link.
  */
-function surveymarks_page_menu_args( $args ) {
+function blunderbus_page_menu_args( $args ) {
 	$args['show_home'] = true;
 	return $args;
 }
-add_filter( 'wp_page_menu_args', 'surveymarks_page_menu_args' );
+add_filter( 'wp_page_menu_args', 'blunderbus_page_menu_args' );
 
 /**
  * Adds custom classes to the array of body classes.
  */
-function surveymarks_body_classes( $classes ) {
+function blunderbus_body_classes( $classes ) {
 	// Adds a class of group-blog to blogs with more than 1 published author
 	if ( is_multi_author() ) {
 		$classes[] = 'group-blog';
@@ -27,12 +27,12 @@ function surveymarks_body_classes( $classes ) {
 
 	return $classes;
 }
-add_filter( 'body_class', 'surveymarks_body_classes' );
+add_filter( 'body_class', 'blunderbus_body_classes' );
 
 /**
  * Filter in a link to a content ID attribute for the next/previous image links on image attachment pages
  */
-function surveymarks_enhanced_image_navigation( $url, $id ) {
+function blunderbus_enhanced_image_navigation( $url, $id ) {
 	if ( ! is_attachment() && ! wp_attachment_is_image( $id ) )
 		return $url;
 
@@ -42,12 +42,12 @@ function surveymarks_enhanced_image_navigation( $url, $id ) {
 
 	return $url;
 }
-add_filter( 'attachment_link', 'surveymarks_enhanced_image_navigation', 10, 2 );
+add_filter( 'attachment_link', 'blunderbus_enhanced_image_navigation', 10, 2 );
 
 /**
  * Filters wp_title to print a neat <title> tag based on what is being viewed.
  */
-function surveymarks_wp_title( $title, $sep ) {
+function blunderbus_wp_title( $title, $sep ) {
 	global $page, $paged;
 
 	if ( is_feed() )
@@ -63,11 +63,11 @@ function surveymarks_wp_title( $title, $sep ) {
 
 	// Add a page number if necessary:
 	if ( $paged >= 2 || $page >= 2 )
-		$title .= " $sep " . sprintf( __( 'Page %s', 'surveymarks' ), max( $paged, $page ) );
+		$title .= " $sep " . sprintf( __( 'Page %s', 'blunderbus' ), max( $paged, $page ) );
 
 	return $title;
 }
-add_filter( 'wp_title', 'surveymarks_wp_title', 10, 2 );
+add_filter( 'wp_title', 'blunderbus_wp_title', 10, 2 );
 
 /**
  * Enqueue fonts
