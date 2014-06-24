@@ -33,6 +33,7 @@ Twitter Bootstrap
 body {
 	word-wrap: break-word;
 	font-family: "Open Sans", Helvetica, Arial, sans-serif;
+	font-size: 16px;
 }
 
 /* Alignment */
@@ -144,6 +145,14 @@ footer .container { background-color: #7d593f; }
 }
 
 .small-map { float: right; }
+
+a { color: #9c3782; }
+a:hover, a:focus { color: #ba86a6; text-decoration: none; }
+
+.entry-meta a, .entry-utility a { color: #265e15; }
+.entry-meta a:hover, .entry-utility a:hover { color: #56d42f; }
+
+blockquote { border-left: 12px solid #d8d1e3; }
 
 /* Clearing */
 .clear {
