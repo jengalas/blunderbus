@@ -82,5 +82,9 @@
 <div class="main-content">
 	<div class="container">
 		<div class="row">
-			<div id="content" class="main-content-inner col-sm-12 col-md-8">
-
+			<?php 
+			if ( is_page_template()) {
+			    echo '<div id="content" class="main-content-inner col-sm-12 col-md-8">';
+			} else {
+			    echo '<div id="content" class="main-content-inner col-sm-12">';
+			} ?>
