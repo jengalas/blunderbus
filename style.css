@@ -133,7 +133,7 @@ object {
 
 /* Content */
 
-.container { background-color: #fffafa; border-right: 1px solid #d2bbaa; border-left: 1px solid #d2bbaa; padding: 0 2em; }
+.container { background-color: #fffafa; border-right: 1px solid #d2bbaa; border-left: 1px solid #d2bbaa; padding: 0 3em; }
 
 footer .container { background-color: #7d593f; }
 
@@ -145,6 +145,10 @@ footer .container { background-color: #7d593f; }
 }
 
 .small-map { float: right; }
+
+h1, h2, h3, h4 { color: #9f5682; font-family: Raleway, "Open Sans", Arial, sans-serif; }
+
+h3.widget-title { color: #c6a68e; font-family: Raleway,"Open Sans",sans-serif; font-size: 16px; text-transform: uppercase; }
 
 a { color: #9c3782; }
 a:hover, a:focus { color: #ba86a6; text-decoration: none; }
@@ -182,6 +186,7 @@ blockquote { border-left: 12px solid #d8d1e3; }
 .navbar .navbar-nav>.dropdown>a .caret { border-bottom-color: #999999}
 .navbar .navbar-nav>.dropdown>a:hover .caret { border-bottom-color: #FFFFFF}
 
+.nav-pills > li.active > a, .nav-pills > li.active > a:hover, .nav-pills > li.active > a:focus { background-color: #9f5682; outline: none; }
 
 
 /* Here some needed widget styles
