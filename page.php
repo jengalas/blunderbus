@@ -23,5 +23,5 @@ get_header(); ?>
 		?>
 
 	<?php endwhile; // end of the loop. ?>
-
+<?php get_sidebar('2'); ?>
 <?php get_footer(); ?>
