@@ -54,6 +54,9 @@ body {
 	margin: 0 auto;
 }
 
+.full { width: 100%; }
+
+.main { max-width: 1170px; margin: 0 auto; }
 
 /* Images and wp-captions should always fit and be responsive */
 img {
