@@ -83,7 +83,7 @@
 	<div class="container">
 		<div class="row">
 			<?php 
-			if ( is_page() || is_page_template()) {
+			if ( is_page_template('grandcanyonsurvey-page.php')) {
 			    echo '<div id="content" class="main-content-inner col-sm-12 col-md-8">';
 			} else {
 			    echo '<div id="content" class="main-content-inner col-sm-12">';
