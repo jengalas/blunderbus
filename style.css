@@ -35,7 +35,7 @@ body {
 	font-family: "Open Sans", Helvetica, Arial, sans-serif;
 	font-size: 16px;
 	color: #433023;
-	background-color: #fffafa;
+	background-color: #fffdf9;
 }
 
 body.logged-in .navbar { top: 28px	 ! important; }
@@ -160,7 +160,7 @@ object {
 
 /* Content */
 
-.container { background-color: #fffafa; padding: 0 3em; }
+.container { background-color: #fffdf9; padding: 0 3em; }
 
 .site-footer, footer .container { background-color: #7d593f; }
 
@@ -188,8 +188,8 @@ h3.widget-title { color: #c6a68e; font-family: Raleway,"Open Sans",sans-serif; f
 
 .page-title { font-family: Amaranth, "Open Sans", sans-serif; }
 
-a { color: #8b6549; }  
-a:hover, a:focus { color: #b69176; text-decoration: none; }
+a { color: #8b6549; color: #7ba60d;}
+a:hover, a:focus { color: #b69176; color: #557109; text-decoration: none; }
 
 h1 a { color: #9c3782; }
 h1 a:hover, h1 a:focus {  color: #ba86a6; }

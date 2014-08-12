@@ -48,7 +48,7 @@ function blunderbus_setup() {
 		 * Setup the WordPress core custom background feature.
 		*/
 		add_theme_support( 'custom-background', apply_filters( 'blunderbus_custom_background_args', array(
-			'default-color' => '#fffafa',
+			'default-color' => '#fffdf9',
 			'default-image' => '',
 		) ) );
 
