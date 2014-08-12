@@ -172,9 +172,6 @@ object {
 .site-navigation { }
 .site-navigation-inner { padding-top: 10px; }
 
-@media screen and (max-width: 800px) {
-   .main-content { padding-top: 50px; }
-}
 
 .main-content-inner {
 	padding-bottom: 1.5em;
