@@ -39,13 +39,6 @@
 						?>
 					</div>
 				</div>
-				<div class="site-info">
-					<?php do_action( 'blunderbus_credits' ); ?>
-					<a href="http://wordpress.org/" title="<?php esc_attr_e( 'A Semantic Personal Publishing Platform', 'blunderbus' ); ?>" rel="generator"><?php printf( __( 'Proudly powered by %s', 'blunderbus' ), 'WordPress' ); ?></a>
-					<span class="sep"> | </span>
-					<?php printf( __( 'Theme: %1$s by %2$s.', 'blunderbus' ), 'blunderbus', '<a href="http://jennifergalas.com/" rel="designer">Zhanna</a>' ); ?>
-				</div><!-- close .site-info -->
-
 			</div>
 		</div>
 	</div><!-- close .container -->
