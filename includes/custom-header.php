@@ -29,8 +29,7 @@ function blunderbus_custom_header_setup() {
 	if ( function_exists( 'add_theme_support' ) ) {
 		add_theme_support( 'custom-header', apply_filters( 'blunderbus_custom_header_args', array(
 			'default-image'          => '',
-			'default-text-color'     => '000',
-			
+			'default-text-color'     => '000',			
 			'flex-height'            => true,
 			'wp-head-callback'       => 'blunderbus_header_style',
 			'admin-head-callback'    => 'blunderbus_admin_header_style',
