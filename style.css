@@ -134,6 +134,20 @@ object {
 	z-index: 100000; /* Above WP toolbar */
 }
 
+/* Header */
+
+#masthead { 
+	background-attachment: fixed;
+    background-position: center top;
+    background-repeat: no-repeat;
+    height: 216px;
+    padding-top: 0;
+    position: relative; 
+    display:block;
+}   
+
+.site-header {}
+
 
 /* Content */
 
@@ -190,7 +204,7 @@ footer a:hover { border-bottom: 1px dashed; color: #e0bad1; text-decoration: non
 
 ul#main-menu { float: right; }
 
-.navbar { background-color: #fffafa; font-family: Raleway, "Open Sans", Arial, sans-serif;}
+.navbar { background-color: #e8ddd4; font-family: Raleway, "Open Sans", Arial, sans-serif; margin-bottom: 0;}
 .navbar { border-radius: 0; border-left: none; border-right: none; }
 .navbar .navbar-nav > .active > a:hover,.navbar .navbar-nav > li > a:hover, .navbar .navbar-nav > li > a:focus { background-color: #825E65}
 .navbar .navbar-nav > .active > a,.navbar .navbar-nav > .open > a,.navbar .navbar-nav>.open>a, .navbar .navbar-nav > .open > a:hover,.navbar .navbar-nav > .open > a, .navbar .navbar-nav > .open > a:hover, .navbar .navbar-nav>.open>a:focus { background-color: #825E65}
@@ -199,17 +213,17 @@ ul#main-menu { float: right; }
 .navbar { background-image: none; }
 .dropdown-menu > li > a:hover, .dropdown-menu>li>a:focus { background-image: none; }
 .dropdown-menu > .active > a, .dropdown-menu > .active > a:hover, .dropdown-menu > .active > a:focus { background-color:#7ba60d ;}
-.navbar .navbar-brand { color: #999999}
+.navbar .navbar-brand { color: #825e65}
 .navbar .navbar-brand:hover { color: #825E65}
-.navbar .navbar-nav>li>a { color: #777}
+.navbar .navbar-nav>li>a { color: #825e65}
 .navbar .navbar-nav>li>a:hover, .navbar .navbar-nav>li>a:focus { color: #FFFFFF}
 .navbar .navbar-nav>.active>a,.navbar .navbar-nav>.open>a, .navbar .navbar-nav>.open>a:hover, .navbar .navbar-nav>.open>a:focus { color: #FFFAFA}
 .navbar .navbar-nav>.active>a:hover, .navbar .navbar-nav>.active>a:focus { color: #FFFFFF}
 .dropdown-menu>li>a { color: #333333}
 .dropdown-menu>li>a:hover, .dropdown-menu>li>a:focus { color: #FFFFFF}
-.navbar .navbar-nav>.dropdown>a .caret { border-top-color: #999999}
+.navbar .navbar-nav>.dropdown>a .caret { border-top-color: #825e65}
 .navbar .navbar-nav>.dropdown>a:hover .caret { border-top-color: #FFFFFF}
-.navbar .navbar-nav>.dropdown>a .caret { border-bottom-color: #999999}
+.navbar .navbar-nav>.dropdown>a .caret { border-bottom-color: #825e65}
 .navbar .navbar-nav>.dropdown>a:hover .caret { border-bottom-color: #FFFFFF}
 
 .nav-pills > li.active > a, .nav-pills > li.active > a:hover, .nav-pills > li.active > a:focus { background-color: #b1896b; outline: none; }
