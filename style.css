@@ -188,6 +188,8 @@ footer a:hover { border-bottom: 1px dashed; color: #e0bad1; text-decoration: non
 
 /* Navigation */
 
+ul#main-menu { float: right; }
+
 .navbar { background-color: #fffafa; font-family: Raleway, "Open Sans", Arial, sans-serif;}
 .navbar { border-radius: 0; border-left: none; border-right: none; }
 .navbar .navbar-nav > .active > a:hover,.navbar .navbar-nav > li > a:hover, .navbar .navbar-nav > li > a:focus { background-color: #825E65}
