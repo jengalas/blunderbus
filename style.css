@@ -182,11 +182,13 @@ object {
 
 .small-map { float: right; }
 
-h1, h2, h3, h4 { color: #9c3782; font-family: Raleway, "Open Sans", Arial, sans-serif; }
+h1, h2, h3, h4 { color: #9c3782; font-family: "Open Sans", Arial, sans-serif; }
 
 h3.widget-title { color: #c6a68e; font-family: Raleway,"Open Sans",sans-serif; font-size: 16px; text-transform: uppercase; }
 
 .page-title { font-family: Amaranth, "Open Sans", sans-serif; }
+
+.page-header { border-bottom: 1px solid #e8ddd4; } 
 
 a { color: #8b6549; color: #7ba60d;}
 a:hover, a:focus { color: #b69176; color: #557109; text-decoration: none; }
@@ -222,13 +224,13 @@ ul#main-menu { float: right; }
 }
 
 .navbar { border-radius: 0; border-left: none; border-right: none; }
-.navbar .navbar-nav > .active > a:hover,.navbar .navbar-nav > li > a:hover, .navbar .navbar-nav > li > a:focus { background-color: #825E65}
+.navbar .navbar-nav > .active > a:hover,.navbar .navbar-nav > li > a:hover, .navbar .navbar-nav > li > a:focus { background-color: #825E65; }
 .navbar .navbar-nav > .active > a,.navbar .navbar-nav > .open > a,.navbar .navbar-nav>.open>a, .navbar .navbar-nav > .open > a:hover,.navbar .navbar-nav > .open > a, .navbar .navbar-nav > .open > a:hover, .navbar .navbar-nav>.open>a:focus { background-color: #825E65}
 .dropdown-menu { background-color: #FFFAFA}
-.dropdown-menu>li>a:hover, .dropdown-menu>li>a:focus { background-color: #825E65}
+.dropdown-menu>li>a:hover, .dropdown-menu>li>a:focus { background-color: #7ba60d;}
 .navbar { background-image: none; }
 .dropdown-menu > li > a:hover, .dropdown-menu>li>a:focus { background-image: none; }
-.dropdown-menu > .active > a, .dropdown-menu > .active > a:hover, .dropdown-menu > .active > a:focus { background-color:#7ba60d ;}
+.dropdown-menu > .active > a, .dropdown-menu > .active > a:hover, .dropdown-menu > .active > a:focus { background-color: #825E65;}
 .navbar .navbar-brand { color: #6d4f54}
 .navbar .navbar-brand:hover { color: #825E65}
 .navbar .navbar-nav>li>a { color: #6d4f54}
@@ -241,10 +243,13 @@ ul#main-menu { float: right; }
 .navbar .navbar-nav>.dropdown>a:hover .caret { border-top-color: #FFFFFF}
 .navbar .navbar-nav>.dropdown>a .caret { border-bottom-color: #6d4f54}
 .navbar .navbar-nav>.dropdown>a:hover .caret { border-bottom-color: #FFFFFF}
+.navbar .navbar-nav>.dropdown>a:focus .caret { border-top-color: #FFFFFF}
+.navbar .navbar-nav>.dropdown>a:focus .caret { border-bottom-color: #FFFFFF}
 
 .nav-pills > li.active > a, .nav-pills > li.active > a:hover, .nav-pills > li.active > a:focus { background-color: #b1896b; outline: none; }
 .nav > li > a:hover, .nav > li > a:focus { background-color: #f5f0eb; }
 
+.pager li > a, .pager li > span { border-radius: 3px; }
 
 /* Here some needed widget styles
  * Most widgets are adapted in the file bootstrap-wp.js - and REALLY easy to modify! ;) */
