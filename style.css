@@ -33,12 +33,13 @@ Twitter Bootstrap
 body {
 	word-wrap: break-word;
 	font-family: "Open Sans", Helvetica, Arial, sans-serif;
-	font-size: 16px;
+	font-size: 18px;
 	color: #433023;
 	background-color: #fffdf9;
+	line-height: 1.5;
 }
 
-body.logged-in .navbar { top: 28px	 ! important; }
+body.logged-in .navbar { top: 30px !important; }
 
 /* Alignment */
 .alignleft {
@@ -77,6 +78,9 @@ img[class*="wp-image-"] {
 	margin-bottom: 10px;
 	max-width: 100%;
 	padding: 0 10px;
+	font-family: Arial, sans-serif;
+	font-size: 80%;
+	font-style: italic;
 }
 .wp-caption.aligncenter {
 	margin-bottom: 10px;
@@ -88,6 +92,8 @@ img[class*="wp-image-"] {
 	text-align: center;
 	margin-top: 10px;
 }
+
+#fancybox-title-over { margin: 5px; }
 
 /* WP Gallery */
 .gallery {
@@ -182,19 +188,19 @@ object {
 
 .small-map { float: right; }
 
-h1, h2, h3, h4 { color: #9c3782; font-family: "Open Sans", Arial, sans-serif; }
+h1, h2, h3, h4 { color: #9c3782; color: #7ba60d; font-family: Lato, "Open Sans", Arial, sans-serif; font-style: italic; font-weight: bold;}
 
-h3.widget-title { color: #c6a68e; font-family: Raleway,"Open Sans",sans-serif; font-size: 16px; text-transform: uppercase; }
+h3.widget-title { color: #c6a68e; font-family: Raleway,"Open Sans",sans-serif; font-size: 20px; text-transform: uppercase; font-weight: normal; font-style: normal;}
 
-.page-title { font-family: Amaranth, "Open Sans", sans-serif; }
+/* .page-title { font-family: Amaranth, "Open Sans", sans-serif; } */	
 
 .page-header { border-bottom: 1px solid #e8ddd4; } 
 
 a { color: #8b6549; color: #7ba60d;}
 a:hover, a:focus { color: #b69176; color: #557109; text-decoration: none; }
 
-h1 a { color: #9c3782; }
-h1 a:hover, h1 a:focus {  color: #ba86a6; }
+/* h1 a { color: #9c3782; }
+h1 a:hover, h1 a:focus {  color: #ba86a6; } */
 
 .entry-meta a, .entry-utility a { color: #265e15; }
 .entry-meta a:hover, .entry-utility a:hover { color: #56d42f; }
@@ -255,6 +261,9 @@ ul#main-menu { float: right; }
  * Most widgets are adapted in the file bootstrap-wp.js - and REALLY easy to modify! ;) */
 .widget { margin-bottom: 2em; }
 .widget_nav_menu ul.sub-menu li, .widget_pages ul.children li { padding-left: 15px; }
+
+footer .nav > li > a { padding: 0; display: inline; }
+footer .nav > li > a:hover, footer .nav > li > a:focus { background-color: transparent; }
 
 /* Hiding the search widget's button in widgets. thats just too old-skool. :) but if you want it back, just delete the next line.
  * Note: you can change the whole appearance of the search_form() function in our searchform.php */

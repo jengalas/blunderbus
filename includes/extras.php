@@ -76,7 +76,7 @@ add_filter( 'wp_title', 'blunderbus_wp_title', 10, 2 );
 function wpse_google_webfonts() {
     $protocol = is_ssl() ? 'https' : 'http';
     $query_args = array(
-        'family' => 'Open+Sans:400italic,700italic,400,700|Open+Sans+Condensed:300|Raleway:400|Amaranth:400',
+        'family' => 'Open+Sans:400italic,700italic,400,700|Open+Sans+Condensed:300|Raleway:400|Amaranth:400|Lato:700italic',
         'subset' => $subsets,
     );
 
