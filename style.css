@@ -186,7 +186,16 @@ object {
 	margin: 0 0 1.5em;
 }
 
+/* Google map display on survey mark pages */
 
+@media screen and (max-width: 800px) {
+	.small-map { position: relative; padding-bottom: 75%; height: 0; overflow: hidden; } 
+	.small-map iframe {  position: absolute; top: 0; left: 0; width: 100% !important; height: 100% !important; }
+}
+
+@media screen and (min-width: 800px) {
+.small-map { float: right; } 
+}
 
 h1, h2, h3, h4 { color: #9c3782; color: #7ba60d; font-family: Lato, "Open Sans", Arial, sans-serif; font-style: italic; font-weight: bold; clear: both;}
 
