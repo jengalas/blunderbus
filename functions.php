@@ -159,7 +159,7 @@ add_filter('wp_nav_menu_items', 'add_search_form', 10, 2);
  
  function add_search_form($items, $args) {
           if( $args->theme_location == 'primary' )
-          $items .= '<li class="search"><form role="search" method="get" id="searchform" action="'.home_url( '/' ).'"><input type="text" value="search" name="s" id="s" /><input type="submit" id="searchsubmit" value="'. esc_attr__('Search') .'" /></form></li>';
+          $items .= '<li class="search">'.get_search_form(false).'</li>';
      return $items;
 }
 

@@ -222,7 +222,7 @@ footer a:hover { border-bottom: 1px dashed; color: #e0bad1; text-decoration: non
 
 ul#main-menu { float: right; }
 
-.navbar { background-color: #e8ddd4; font-family: Raleway, "Open Sans", Arial, sans-serif; margin-bottom: 0; position: fixed; top: 0; width: 100%; z-index: 100;}
+.navbar { background-image: none; background-color: #e8ddd4; font-size: 16px; font-family: Raleway, "Open Sans", Arial, sans-serif; margin-bottom: 0; position: fixed; top: 0; width: 100%; z-index: 100;}
 
 /** Top menu will scroll off-screen on narrower screen widths **/
 @media screen and (max-width: 800px) {
@@ -233,8 +233,8 @@ ul#main-menu { float: right; }
 .navbar .navbar-nav > .active > a:hover,.navbar .navbar-nav > li > a:hover, .navbar .navbar-nav > li > a:focus { background-color: #825E65; }
 .navbar .navbar-nav > .active > a,.navbar .navbar-nav > .open > a,.navbar .navbar-nav>.open>a, .navbar .navbar-nav > .open > a:hover,.navbar .navbar-nav > .open > a, .navbar .navbar-nav > .open > a:hover, .navbar .navbar-nav>.open>a:focus { background-color: #825E65}
 .dropdown-menu { background-color: #FFFAFA}
+.dropdown-menu > li { font-size: 14px; }
 .dropdown-menu>li>a:hover, .dropdown-menu>li>a:focus { background-color: #7ba60d;}
-.navbar { background-image: none; }
 .dropdown-menu > li > a:hover, .dropdown-menu>li>a:focus { background-image: none; }
 .dropdown-menu > .active > a, .dropdown-menu > .active > a:hover, .dropdown-menu > .active > a:focus { background-color: #825E65;}
 .navbar .navbar-brand { color: #6d4f54}
@@ -268,6 +268,18 @@ footer .nav > li > a:hover, footer .nav > li > a:focus { background-color: trans
 /* Hiding the search widget's button in widgets. thats just too old-skool. :) but if you want it back, just delete the next line.
  * Note: you can change the whole appearance of the search_form() function in our searchform.php */
 .widget_search .search-form input[type="submit"] { display: none; }
+
+.form-control { font-family: Raleway,"Open Sans",sans-serif; font-size: 14px; }
+
+.form-control:focus {
+    border-color: #bbee1a;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 4px rgba(72, 241, 132, 0.3);
+    outline: 0 none;
+}
+
+.navbar-nav > li.search { padding-top: 8px; }
+
+.navbar-nav input.search-submit { display: none; }
 
 /* Make sure select elements fit in widgets */
 .widget select {
