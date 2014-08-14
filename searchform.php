@@ -6,8 +6,11 @@
  */
 ?>
 <form role="search" method="get" class="form-inline search-form" action="<?php echo esc_url( home_url( '/' ) ); ?>">
+	<div class="input-group">
+            <input type="text" class="search-field form-control" placeholder="<?php echo esc_attr_x( 'Keyword search &hellip;', 'placeholder', 'blunderbus' ); ?>" name="srch-term" id="srch-term">
+            <div class="input-group-btn">
+                <button class="btn btn-default" type="submit"><i class="glyphicon glyphicon-search"></i></button>
+            </div>
+        </div>
 	<label>
-		<input type="search" class="search-field" placeholder="<?php echo esc_attr_x( 'Search &hellip;', 'placeholder', 'blunderbus' ); ?>" value="<?php echo esc_attr( get_search_query() ); ?>" name="s" title="<?php _ex( 'Search for:', 'label', 'blunderbus' ); ?>">
-	</label>
-	<input type="submit" class="search-submit" value="<?php echo esc_attr_x( 'Search', 'submit button', 'blunderbus' ); ?>">
 </form>

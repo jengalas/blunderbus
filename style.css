@@ -186,9 +186,9 @@ object {
 	margin: 0 0 1.5em;
 }
 
-.small-map { float: right; }
 
-h1, h2, h3, h4 { color: #9c3782; color: #7ba60d; font-family: Lato, "Open Sans", Arial, sans-serif; font-style: italic; font-weight: bold;}
+
+h1, h2, h3, h4 { color: #9c3782; color: #7ba60d; font-family: Lato, "Open Sans", Arial, sans-serif; font-style: italic; font-weight: bold; clear: both;}
 
 h3.widget-title { color: #c6a68e; font-family: Raleway,"Open Sans",sans-serif; font-size: 20px; text-transform: uppercase; font-weight: normal; font-style: normal;}
 
@@ -211,6 +211,12 @@ li { list-style-type: none; }
 
 footer a { color: #cf95b9; text-decoration: none; }
 footer a:hover { border-bottom: 1px dashed; color: #e0bad1; text-decoration: none; }
+
+#content .attachment-thumbnail, #content img.wp-post-image { padding: 4px; } /* Thumbnails on recoveries pages and RMs */
+    
+#tooltip { font-size: 16px; padding: 3px; background: #222 !important; }
+
+.wp-tab-active { border-bottom: none; }
 
 /* Clearing */
 .clear {
@@ -269,7 +275,7 @@ footer .nav > li > a:hover, footer .nav > li > a:focus { background-color: trans
  * Note: you can change the whole appearance of the search_form() function in our searchform.php */
 .widget_search .search-form input[type="submit"] { display: none; }
 
-.form-control { font-family: Raleway,"Open Sans",sans-serif; font-size: 14px; }
+.form-control { font-family: Raleway,"Open Sans",sans-serif; font-size: 14px; font-weight: normal; }
 
 .form-control:focus {
     border-color: #bbee1a;
@@ -279,7 +285,9 @@ footer .nav > li > a:hover, footer .nav > li > a:focus { background-color: trans
 
 .navbar-nav > li.search { padding-top: 8px; }
 
-.navbar-nav input.search-submit { display: none; }
+.navbar-nav .input-group-btn { display: none; }
+
+.navbar-nav input#srch-term { border-radius: 4px; }
 
 /* Make sure select elements fit in widgets */
 .widget select {
