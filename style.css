@@ -29,13 +29,13 @@ Twitter Bootstrap
 
 /* My Minimal WordPress Styling comes here */
 
-/* This is a small security for too long strings titles */
+
 body {
-	word-wrap: break-word;
-	font-family: "Open Sans", Helvetica, Arial, sans-serif;
-	font-size: 18px;
+	word-wrap: break-word;  /* This is a small security for too-long  titles */
 	color: #433023;
 	background-color: #fffdf9;
+	font-family: "Open Sans", Helvetica, Arial, sans-serif;
+	font-size: 16px;
 	line-height: 1.5;
 }
 
@@ -152,7 +152,7 @@ object {
     height: 280px;
     margin-top: 50px;
     position: relative; 
-    display:block;
+    display: block;
 }   
 
 /** Masthead won't display on narrower screen widths **/
@@ -160,8 +160,6 @@ object {
 @media screen and (max-width: 800px) {
    #masthead { display: none; }
 }
-
-.site-header {}
 
 
 /* Content */
@@ -197,7 +195,9 @@ object {
 .small-map { float: right; } 
 }
 
-h1, h2, h3, h4 { color: #9c3782; color: #7ba60d; font-family: Lato, "Open Sans", Arial, sans-serif; font-style: italic; font-weight: bold; clear: both;}
+h1, h2, h3, h4 { color: #9c3782; color: #7ba60d; font-family: Amaranth, Lato, "Open Sans", Arial, sans-serif; /*font-style: italic; font-weight: bold; */clear: both;}
+
+h2.entry-title { font-size: 24px; }
 
 h3.widget-title { color: #c6a68e; font-family: Raleway,"Open Sans",sans-serif; font-size: 20px; text-transform: uppercase; font-weight: normal; font-style: normal;}
 
@@ -221,6 +221,10 @@ li { list-style-type: none; }
 footer a { color: #cf95b9; text-decoration: none; }
 footer a:hover { border-bottom: 1px dashed; color: #e0bad1; text-decoration: none; }
 
+.thumbnail { border: medium none; box-shadow: none; height: 250px; }
+
+.thumbnail > img, .thumbnail a > img { margin-left: 0; }
+
 #content .attachment-thumbnail, #content img.wp-post-image { padding: 4px; } /* Thumbnails on recoveries pages and RMs */
     
 #tooltip { font-size: 16px; padding: 3px; background: #222 !important; }
@@ -237,7 +241,7 @@ footer a:hover { border-bottom: 1px dashed; color: #e0bad1; text-decoration: non
 
 ul#main-menu { float: right; }
 
-.navbar { background-image: none; background-color: #e8ddd4; font-size: 16px; font-family: Raleway, "Open Sans", Arial, sans-serif; margin-bottom: 0; position: fixed; top: 0; width: 100%; z-index: 100;}
+.navbar { background-image: none; background-color: #e8ddd4; font-size: 14px; font-family: Raleway, "Open Sans", Arial, sans-serif; margin-bottom: 0; position: fixed; top: 0; width: 100%; z-index: 100;}
 
 /** Top menu will scroll off-screen on narrower screen widths **/
 @media screen and (max-width: 800px) {
@@ -270,7 +274,20 @@ ul#main-menu { float: right; }
 .nav-pills > li.active > a, .nav-pills > li.active > a:hover, .nav-pills > li.active > a:focus { background-color: #b1896b; outline: none; }
 .nav > li > a:hover, .nav > li > a:focus { background-color: #f5f0eb; }
 
-.pager li > a, .pager li > span { border-radius: 3px; }
+.pager li > a, .pager li > span { border-radius: 3px; border-color: #e8ddd4; }
+
+.pager li > a:hover, .pager li > a:focus { color: #433023; background-color: #e8ddd4; }
+
+.btn-primary { color: #e8ddd4; background-color: #a8868d; border-color: #a8868d; }
+
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active,
+.btn-primary.active {
+  color: #e8ddd4; 
+  background-color: #825e65; 
+  border-color: #825e65;
+}
 
 /* Here some needed widget styles
  * Most widgets are adapted in the file bootstrap-wp.js - and REALLY easy to modify! ;) */
@@ -318,8 +335,8 @@ table.USGS_quads { font-size: 90%; }
 td.USGS_quads {
 border: 1px solid #400080;
 padding: 10px;
-height: 90px;
-width: 70px;
+height: 100px;
+width: 100px;
 }
 
 td.lat_coordinate_grid {
