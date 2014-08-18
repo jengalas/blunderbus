@@ -24,7 +24,7 @@
 		<?php endif; ?>
 	</header><!-- .entry-header -->
 
-	<?php if ( is_search() || is_archive() ) : // Only display Excerpts for Search and Archive Pages ?>
+	<?php if ( is_search() || is_archive() || is_home) : // Only display Excerpts for Search and Archive Pages; added home page 8/18/14 ?>
 	<div class="entry-summary">
 		<?php the_excerpt(); ?>
 	</div><!-- .entry-summary -->
