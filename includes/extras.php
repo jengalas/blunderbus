@@ -162,3 +162,17 @@ function my_deregister_heartbeat() {
 	if ( 'post.php' != $pagenow && 'post-new.php' != $pagenow )
 		wp_deregister_script('heartbeat'); 
 } 
+
+/**
+ * Outputs Last Modified date
+ */
+
+add_shortcode( 'entry-modified', 'krogs_entry_modified_shortcode' );
+ 
+function krogs_entry_modified_shortcode( $attr ) {
+ 
+$attr = shortcode_atts( array( 'before' => '', 'after' => '', 'format' => get_option( 'date_format' ) ), $attr );
+ 
+$modified = '<span class="modified" title="' . sprintf( get_the_modified_time( esc_attr__( 'l, F jS, Y, g:i a', $domain ) ) ) . '">' . sprintf( get_the_modified_time( $attr['format'] ) ) . '</span>'; 
+return $attr['before'] . $modified . $attr['after'];
+}
