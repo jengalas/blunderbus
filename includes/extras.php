@@ -164,7 +164,7 @@ function my_deregister_heartbeat() {
 } 
 
 /**
- * Outputs Last Modified date
+ * Outputs Last Modified date; from http://krogsgard.com/2012/create-a-shortcode-to-show-when-a-post-was-last-updated/
  */
 
 add_shortcode( 'entry-modified', 'krogs_entry_modified_shortcode' );
