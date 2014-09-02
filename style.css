@@ -32,7 +32,7 @@ Twitter Bootstrap
 
 body {
 	word-wrap: break-word;  /* This is a small security for too-long  titles */
-	color: #433023;
+	color: #6f6361;
 	background-color: #fffdf9;
 	font-family: "Open Sans", Helvetica, Arial, sans-serif;
 	font-size: 16px;
@@ -40,6 +40,8 @@ body {
 }
 
 body.logged-in .navbar { top: 30px !important; }
+
+p { margin: 0 0 24px; }
 
 /* Alignment */
 .alignleft {
@@ -95,6 +97,16 @@ img[class*="wp-image-"] {
 
 #fancybox-title-over { margin: 5px; }
 
+.search-result-image { float: left; margin-right: 20px; margin-bottom: 24px; }  /* Featured image in WordPress Archive View  */
+
+.filetype-icon { 
+	border: 0 none;
+	padding: 0; 
+	margin-right: 5px; 
+	box-shadow: none;
+	vertical-align: top;
+}
+
 /* WP Gallery */
 .gallery {
 	margin-bottom: 1.5em;
@@ -115,6 +127,8 @@ iframe,
 object {
 	max-width: 100%;
 }
+
+iframe { border: 0 none; }
 
 
 /* Text meant only for screen readers */
@@ -157,7 +171,7 @@ object {
 
 /** Masthead won't display on narrower screen widths **/
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 1180px) {
    #masthead { display: none; }
 }
 
@@ -192,7 +206,7 @@ object {
 }
 
 @media screen and (min-width: 800px) {
-.small-map { float: right; } 
+.small-map { float: right; margin: 0 0 20px 20px;} 
 }
 
 h1, h2, h3, h4 { color: #9c3782; color: #7ba60d; font-family: Amaranth, Lato, "Open Sans", Arial, sans-serif; /*font-style: italic; font-weight: bold; */clear: both;}
@@ -203,23 +217,28 @@ h3.widget-title { color: #c6a68e; font-family: Raleway,"Open Sans",sans-serif; f
 
 /* .page-title { font-family: Amaranth, "Open Sans", sans-serif; } */	
 
-.page-header { border-bottom: 1px solid #e8ddd4; } 
+.page-header { border-bottom: none; } 
 
 a { color: #8b6549; color: #7ba60d;}
-a:hover, a:focus { color: #b69176; color: #557109; text-decoration: none; }
+a:hover, a:focus { color: #b69176; color: #557109; text-decoration: underline; }
 
 /* h1 a { color: #9c3782; }
 h1 a:hover, h1 a:focus {  color: #ba86a6; } */
 
-.entry-meta a, .entry-utility a { color: #265e15; }
-.entry-meta a:hover, .entry-utility a:hover { color: #56d42f; }
+/* .entry-meta a, .entry-utility a { color: #265e15; }
+.entry-meta a:hover, .entry-utility a:hover { color: #56d42f; } */
+
+.entry-meta { font-size:80%; }
 
 blockquote { border-left: 12px solid #d8d1e3; }
 
 li { list-style-type: none; }
 
+.noshadow { border: 0 none; box-shadow: none; }
+
 footer a { color: #cf95b9; text-decoration: none; }
-footer a:hover { border-bottom: 1px dashed; color: #e0bad1; text-decoration: none; }
+footer .nav > li> a:hover { color: #e0bad1; text-decoration: underline; }
+footer.entry-meta a { color: #c6a68e; }
 
 .thumbnail { border: medium none; box-shadow: none; height: 250px; }
 
@@ -230,6 +249,11 @@ footer a:hover { border-bottom: 1px dashed; color: #e0bad1; text-decoration: non
 #tooltip { font-size: 16px; padding: 3px; background: #222 !important; }
 
 .wp-tab-active { border-bottom: none; }
+
+.panel { box-shadow: none; border-color: #e8ddd4; border-radius: 3px; }
+.panel-footer, .panel-default > .panel-heading { border-color: #e8ddd4; background-color: #f8f5f2;}
+  
+fieldset.benchmark-filter { border-bottom: 1px solid #e8ddd4; padding-bottom: 24px; }
 
 /* Clearing */
 .clear {
@@ -244,9 +268,63 @@ ul#main-menu { float: right; }
 .navbar { background-image: none; background-color: #e8ddd4; font-size: 14px; font-family: Raleway, "Open Sans", Arial, sans-serif; margin-bottom: 0; position: fixed; top: 0; width: 100%; z-index: 100;}
 
 /** Top menu will scroll off-screen on narrower screen widths **/
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 1170px) {
    .navbar { position: relative; }
 }
+
+@media (max-width: 1200px) {
+    .navbar-header {
+        float: none;
+    }
+    .navbar-toggle {
+        display: block;
+    }
+    .navbar-collapse {
+        border-top: 1px solid transparent;
+        box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
+    }
+    .navbar-fixed-top {
+		top: 0;
+		border-width: 0 0 1px;
+	}
+    .navbar-collapse.collapse {
+        display: none!important;
+    }
+    .navbar-nav>li {
+        float: none;
+    }
+    .navbar-nav>li>a {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    .collapse.in{
+  		display:block !important;
+	}
+    .navbar-collapse.in {
+        overflow-y: auto !important;
+    }
+	.navbar-nav .open .dropdown-menu {
+        position: static;
+        float: none;
+        width: auto;
+        margin-top: 0;
+        background-color: transparent;
+        border: 0;
+        box-shadow: none;
+    }
+    .navbar-nav .open .dropdown-menu>li>a, .navbar-nav .open .dropdown-menu .dropdown-header {
+        padding: 5px 15px 5px 25px;
+    }
+    .navbar-inverse .navbar-nav .open .dropdown-menu>li>a {
+        color: #999;
+    }
+    .navbar-inverse .navbar-nav .open .dropdown-menu>li>a:hover, 
+    .navbar-inverse .navbar-nav .open .dropdown-menu>li>a:focus {
+        color: #fff;
+        background-color: transparent;
+        background-image:none;
+    }
+} 
 
 .navbar { border-radius: 0; border-left: none; border-right: none; }
 .navbar .navbar-nav > .active > a:hover,.navbar .navbar-nav > li > a:hover, .navbar .navbar-nav > li > a:focus { background-color: #825E65; }
@@ -271,12 +349,16 @@ ul#main-menu { float: right; }
 .navbar .navbar-nav>.dropdown>a:focus .caret { border-top-color: #FFFFFF}
 .navbar .navbar-nav>.dropdown>a:focus .caret { border-bottom-color: #FFFFFF}
 
+.nav-tabs { border-bottom: 1px solid #e8ddd4; }
+
+.nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus { border-color: #e8ddd4 #e8ddd4 rgba(0, 0, 0, 0); }
+
 .nav-pills > li.active > a, .nav-pills > li.active > a:hover, .nav-pills > li.active > a:focus { background-color: #b1896b; outline: none; }
 .nav > li > a:hover, .nav > li > a:focus { background-color: #f5f0eb; }
 
-.pager li > a, .pager li > span { border-radius: 3px; border-color: #e8ddd4; }
+.pager li > a, .pager li > span { border-radius: 3px; border-color: #e8ddd4; padding: 1px 5px;}
 
-.pager li > a:hover, .pager li > a:focus { color: #433023; background-color: #e8ddd4; }
+.pager li > a:hover, .pager li > a:focus { color: #6f6361; background-color: #e8ddd4; }
 
 .btn-primary { color: #e8ddd4; background-color: #a8868d; border-color: #a8868d; }
 
@@ -284,9 +366,27 @@ ul#main-menu { float: right; }
 .btn-primary:focus,
 .btn-primary:active,
 .btn-primary.active {
-  color: #e8ddd4; 
   background-color: #825e65; 
   border-color: #825e65;
+}
+
+.btn-primary.disabled,
+.btn-primary[disabled],
+fieldset[disabled] .btn-primary,
+.btn-primary.disabled:hover,
+.btn-primary[disabled]:hover,
+fieldset[disabled] .btn-primary:hover,
+.btn-primary.disabled:focus,
+.btn-primary[disabled]:focus,
+fieldset[disabled] .btn-primary:focus,
+.btn-primary.disabled:active,
+.btn-primary[disabled]:active,
+fieldset[disabled] .btn-primary:active,
+.btn-primary.disabled.active,
+.btn-primary[disabled].active,
+fieldset[disabled] .btn-primary.active {
+  background-color: #9f8f93;
+  border-color: #9f858a;
 }
 
 /* Here some needed widget styles
@@ -301,11 +401,13 @@ footer .nav > li > a:hover, footer .nav > li > a:focus { background-color: trans
  * Note: you can change the whole appearance of the search_form() function in our searchform.php */
 .widget_search .search-form input[type="submit"] { display: none; }
 
-.form-control { font-family: Raleway,"Open Sans",sans-serif; font-size: 14px; font-weight: normal; }
+.alert-info { background-color: transparent; }
+
+.form-control { font-family: Raleway,"Open Sans",sans-serif; font-size: 14px; font-weight: normal; border-color: #d6c0b0; }
 
 .form-control:focus {
-    border-color: #bbee1a;
-    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 4px rgba(72, 241, 132, 0.3);
+    border-color: #d6c0b0;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 4px rgba(125, 89, 63, 0.3);
     outline: 0 none;
 }
 
@@ -324,46 +426,48 @@ footer .nav > li > a:hover, footer .nav > li > a:focus { background-color: trans
  * For example with some margin, like the line below ;) Delete, modify, change classes in HTML if you desire another style */
  .comment .children { margin-left: 1.5em; }
 
+ #commentform input[type="text"] { width: 40%; }
+
 /*  USGS datasheet map styles  */
 
 .usgs-container {
-overflow: auto;
+	overflow: auto;
 }
 
 table.USGS_quads { font-size: 90%; }
 
 td.USGS_quads {
-border: 1px solid #400080;
-padding: 10px;
-height: 100px;
-width: 100px;
+	border: 1px solid #400080;
+	padding: 10px;
+	height: 100px;
+	width: 100px;
 }
 
 td.lat_coordinate_grid {
-border-top: 0;
-border-left: 0;
-border-bottom: 1px dashed #400080;
-border-right: 1px solid #400080;
-text-align: right;
-vertical-align: bottom;
-font-size: 80%;
-padding-right: 2px;
+	border-top: 0;
+	border-left: 0;
+	border-bottom: 1px dashed #400080;
+	border-right: 1px solid #400080;
+	text-align: right;
+	vertical-align: bottom;
+	font-size: 80%;
+	padding-right: 2px;
 }
 
 td.long_coordinate_grid {
-border-top: 1px solid #400080;
-border-left: 0;
-border-bottom: 0;
-border-right: 1px dashed #400080;
-text-align: right;
-vertical-align: top;
-font-size: 80%;
-padding-right: 5px;
-padding-top: 5px;
+	border-top: 1px solid #400080;
+	border-left: 0;
+	border-bottom: 0;
+	border-right: 1px dashed #400080;
+	text-align: right;
+	vertical-align: top;
+	font-size: 80%;
+	padding-right: 5px;
+	padding-top: 5px;
 }
 
 td.usgs_empty {
-border: none;
+	border: 0 none;
 }
 
 /*
