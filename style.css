@@ -254,6 +254,8 @@ footer.entry-meta a { color: #c6a68e; }
 
 .panel { box-shadow: none; border-color: #e8ddd4; border-radius: 3px; }
 .panel-footer, .panel-default > .panel-heading { border-color: #e8ddd4; background-color: #f8f5f2;}
+
+.tab-pane { margin-top: 24px; } 
   
 fieldset.benchmark-filter { border-bottom: 1px solid #e8ddd4; padding-bottom: 24px; }
 
@@ -362,14 +364,14 @@ ul#main-menu { float: right; }
 
 .pager li > a:hover, .pager li > a:focus { color: #6f6361; background-color: #e8ddd4; }
 
-.btn-primary { color: #e8ddd4; background-color: #a8868d; border-color: #a8868d; }
+.btn-primary { color: #e8ddd4; background-color: #825e65; border-color: #825e65;}
 
 .btn-primary:hover,
 .btn-primary:focus,
 .btn-primary:active,
 .btn-primary.active {
-  background-color: #825e65; 
-  border-color: #825e65;
+  background-color: #a8868d; 
+  border-color: #a8868d;
 }
 
 .btn-primary.disabled,
