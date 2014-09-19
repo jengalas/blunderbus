@@ -393,6 +393,15 @@ fieldset[disabled] .btn-primary.active {
   border-color: #9f858a;
 }
 
+/* Overwrite Formidable styles */
+
+.with_frm_style label { font-size: 16px !important; }
+.with_frm_style p.description, .with_frm_style div.description, .with_frm_style .frm_description, .with_frm_style .frm_error { font-size: 16px !important;}
+.with_frm_style .frm_form_fields input, .with_frm_style .frm_form_fields select, .with_frm_style .frm_form_fields textarea{margin-bottom:0 !important;}
+.with_frm_style .frm_form_fields input, #wpcontent .with_frm_style .frm_form_fields select, .with_frm_style .frm_form_fields select, .with_frm_style .frm_form_fields textarea { font-size: 16px !important; width: 100% !important;}
+.with_frm_style .frm_error_style, .with_frm_style .frm_message { font-size: 16px !important;}
+.with_frm_style .frm_message, .with_frm_style .frm_message p { font-size: 16px !important;}
+
 /* Here some needed widget styles
  * Most widgets are adapted in the file bootstrap-wp.js - and REALLY easy to modify! ;) */
 .widget { margin-bottom: 2em; }
