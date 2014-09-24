@@ -85,6 +85,10 @@ img[class*="wp-image-"] {
 	font-family: Arial, sans-serif;
 	font-size: 80%;
 	font-style: italic;
+	height: 220px;
+}
+.wp-caption-landmark {
+	height: 260px;
 }
 .wp-caption.aligncenter {
 	margin-bottom: 10px;
@@ -180,9 +184,10 @@ iframe { border: 0 none; }
 
 /* Content */
 
-.container { background-color: #fffdf9; padding: 0 3em; }
+.container { background-color: #fffdf9; padding: 0 0.5em; }
 
 .site-footer, footer .container { background-color: #7d593f; }
+.entry-content { margin-bottom: 50px; }
 
 #footer-sidebar { display:block; height: 250px; }
 #footer-sidebar1 { float: left; width: 340px; margin-left: 5px; margin-right: 5px; }
