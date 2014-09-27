@@ -214,6 +214,3 @@ require get_template_directory() . '/includes/jetpack.php';
  */
 require get_template_directory() . '/includes/bootstrap-wp-navwalker.php';
 
-
-
-

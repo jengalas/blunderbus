@@ -176,3 +176,14 @@ $attr = shortcode_atts( array( 'before' => '', 'after' => '', 'format' => get_op
 $modified = '<span class="modified" title="' . sprintf( get_the_modified_time( esc_attr__( 'l, F jS, Y, g:i a', $domain ) ) ) . '">' . sprintf( get_the_modified_time( $attr['format'] ) ) . '</span>'; 
 return $attr['before'] . $modified . $attr['after'];
 }
+
+/**
+ * Show drafts in parent post selection (WP-Types).
+ */
+
+add_filter( 'wpcf_pr_belongs_post_status', 'my_wpcf_pr_belongs_post_status' );
+   function my_wpcf_pr_belongs_post_status($statuses)
+   {
+       $statuses[] = 'draft';
+       return $statuses;
+   }
