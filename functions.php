@@ -137,13 +137,18 @@ add_action( 'widgets_init', 'blunderbus_widgets_init' );
 function blunderbus_scripts() {
 
 	// load bootstrap css
-	wp_enqueue_style( 'blunderbus-bootstrap', get_template_directory_uri() . '/includes/resources/bootstrap/css/bootstrap.css' );
+	wp_enqueue_style( 'blunderbus-bootstrap', get_template_directory_uri() . '/includes/resources/bootstrap/css/bootstrap.min.css' );
 
 	// load Blunderbus styles
 	wp_enqueue_style( 'blunderbus-style', get_stylesheet_uri() );
 
+	// load Font Awesome css
+	wp_enqueue_style( 'blunderbus-font-awesome', get_template_directory_uri() . '/includes/css/font-awesome.min.css', false, '4.1.0' );
+	
+
+
 	// load bootstrap js
-	wp_enqueue_script('blunderbus-bootstrapjs', get_template_directory_uri().'/includes/resources/bootstrap/js/bootstrap.js', array('jquery') );
+	wp_enqueue_script('blunderbus-bootstrapjs', get_template_directory_uri().'/includes/resources/bootstrap/js/bootstrap.min.js', array('jquery') );
 
 	// load bootstrap wp js
 	wp_enqueue_script( 'blunderbus-bootstrapwp', get_template_directory_uri() . '/includes/js/bootstrap-wp.js', array('jquery') );
