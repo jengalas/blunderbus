@@ -1,8 +1,8 @@
 /*
 Theme Name: Blunderbus
-Theme URI: http://themekraft.com/tk/
+Theme URI: https://github.com/jengalas/blunderbus
 Author: Zhanna
-Author URI: http://themekraft.com/
+Author URI: http://planetzhanna.com/
 Description: Hi, I am the ultra minimal starter theme Blunderbus, ready for your next awesome WordPress project! I am the most seamless and minimalistic integration of Twitter Bootstrap Framework into the _s starter theme from Automattic, the guys behind WordPress.
 Version: 1.1.2
 License: GNU General Public License v3.0 / License URI: http://www.gnu.org/licenses/gpl-3.0.html
@@ -51,6 +51,21 @@ ul.ngs-reports > li {
 
 ul.ngs-reports > li a { 
   font-size: 90%; 
+}
+
+.resource-list dt {
+	font-weight: normal;
+	padding-top: 8px;
+}
+
+.resource-list dd {
+	font-size: 90%;
+	border-bottom: 1px solid #f7f3ef;
+	padding-bottom: 8px;
+}
+
+.resource-list dt + dd:not(:empty) {
+	padding-top: 5px;
 }
 
 /* Alignment */
@@ -281,6 +296,12 @@ footer.entry-meta a { color: #c6a68e; }
 
 .panel { box-shadow: none; border-color: #e8ddd4; border-radius: 3px; }
 .panel-footer, .panel-default > .panel-heading { border-color: #e8ddd4; background-color: #f8f5f2;}
+.panel-group .panel {
+	border-radius: 2px;
+}
+.panel-group .panel-heading + .panel-collapse .panel-body {
+    border-top: 1px solid #f3eee9;
+}
 
 .tab-pane { margin-top: 24px; } 
   
@@ -393,11 +414,11 @@ ul#main-menu { float: right; }
 
 .nav-tabs { border-bottom: 1px solid #e8ddd4; }
 
-.nav-tabs.recovery-log-tabs > li.active {
+.nav-tabs.recovery-log-tabs, .nav-tabs.resources-tabs > li.active {
 	margin-bottom: -2px;
 }
 
-.nav-tabs.recovery-log-tabs > li.active > a, .nav-tabs.recovery-log-tabs > li.active > a:hover, .nav-tabs.recovery-log-tabs > li.active > a:focus, .nav-tabs.recovery-log-tabs > li > a:active {
+.nav-tabs.recovery-log-tabs > li.active > a, .nav-tabs.recovery-log-tabs > li.active > a:hover, .nav-tabs.recovery-log-tabs > li.active > a:focus, .nav-tabs.recovery-log-tabs > li > a:active, .nav-tabs.resources-tabs > li.active > a, .nav-tabs.resources-tabs > li.active > a:hover, .nav-tabs.resources-tabs > li.active > a:focus, .nav-tabs.resources-tabs > li > a:active {
     background-color: transparent;
     border-bottom: 3px solid #7ba60d;
     color: inherit;
