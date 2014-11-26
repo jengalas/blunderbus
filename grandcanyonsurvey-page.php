@@ -15,6 +15,6 @@ get_header(); ?>
 				comments_template();
 		?>
 
-	<?php endwhile; /* end of the loop. */ ?>
+<?php endwhile; /* end of the loop. */ ?>
 <?php get_sidebar('2'); ?>
 <?php get_footer(); ?>
