@@ -83,6 +83,8 @@ ul.ngs-reports > li a {
 	}
 }
 
+.researched_value { color: #ff0000;}
+
 /* Alignment */
 .alignleft {
 	display: inline;
