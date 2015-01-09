@@ -68,6 +68,21 @@ ul.ngs-reports > li a {
 	padding-top: 5px;
 }
 
+.glossary dd {
+	padding-bottom: 16px;
+}
+
+@media screen and (min-width: 760px) {
+	.glossary dt {
+	width: 300px;
+	white-space: normal;
+	}
+
+.glossary dd {
+	margin-left: 330px;
+	}
+}
+
 /* Alignment */
 .alignleft {
 	display: inline;
