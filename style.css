@@ -295,6 +295,10 @@ li { list-style-type: none; }
 
 ol.mark-notes li { list-style-type: lower-alpha; }
 
+ol.footnote li { list-style-type: decimal; margin-left: -10px;}
+
+ul.bullet li { list-style-type: circle; margin-left: 14px;}
+
 .noshadow { border: 0 none; box-shadow: none; }
 
 footer a { color: #cf95b9; text-decoration: none; }
