@@ -24,7 +24,7 @@ if ( post_password_required() )
 	<?php // You can start editing here -- including this comment! ?>
 
 	<?php if ( have_comments() ) : ?>
-		<header class="page-header">
+		<header>
 			<h2 class="comments-title">
 				<?php
 					printf( _nx( 'One thought on &ldquo;%2$s&rdquo;', '%1$s thoughts on &ldquo;%2$s&rdquo;', get_comments_number(), 'comments title', 'blunderbus' ),
@@ -83,7 +83,7 @@ if ( post_password_required() )
 			  'comment_field' =>  '<p><textarea placeholder="Start typing..." id="comment" class="form-control" name="comment" cols="45" rows="8" aria-required="true"></textarea></p>',
 
 			  'comment_notes_after' => '<p class="form-allowed-tags">' .
-				__( 'You may use these <abbr title="HyperText Markup Language">HTML</abbr> tags and attributes:' ) .
+				__( 'You may use these <abbr title="HyperText Markup Language">HTML</abbr> tags and attributes:', '_tk' ) .
 				'</p><div class="alert alert-info">' . allowed_tags() . '</div>'
 
 			  // So, that was the needed stuff to have bootstrap basic styles for the form elements and buttons

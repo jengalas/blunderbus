@@ -25,21 +25,19 @@ function blunderbus_setup() {
 	// This theme styles the visual editor with editor-style.css to match the theme style.
 	add_editor_style();
 
-	if ( function_exists( 'add_theme_support' ) ) {
+	/**
+	 * Add default posts and comments RSS feed links to head
+	*/
+	add_theme_support( 'automatic-feed-links' );
 
-		/**
-		 * Add default posts and comments RSS feed links to head
-		*/
-		add_theme_support( 'automatic-feed-links' );
+	/**
+	 * Enable support for Post Thumbnails on posts and pages
+	 *
+	 * @link http://codex.wordpress.org/Function_Reference/add_theme_support#Post_Thumbnails
+	*/
+	add_theme_support( 'post-thumbnails' );
 
-		/**
-		 * Enable support for Post Thumbnails on posts and pages
-		 *
-		 * @link http://codex.wordpress.org/Function_Reference/add_theme_support#Post_Thumbnails
-		*/
-		add_theme_support( 'post-thumbnails' );
 
-		/**
 		 * Enable support for Post Formats
 		*/
 		add_theme_support( 'post-formats', array( 'aside', 'image', 'video', 'quote', 'link' ) );
@@ -135,6 +133,9 @@ add_action( 'widgets_init', 'blunderbus_widgets_init' );
  * Enqueue scripts and styles
  */
 function blunderbus_scripts() {
+
+	// Import the necessary TK Bootstrap WP CSS additions
+	wp_enqueue_style( '_tk-bootstrap-wp', get_template_directory_uri() . '/includes/css/bootstrap-wp.css' );
 
 	// load bootstrap css
 	wp_enqueue_style( 'blunderbus-bootstrap', get_template_directory_uri() . '/includes/resources/bootstrap/css/bootstrap.min.css' );
