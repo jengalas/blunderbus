@@ -321,7 +321,12 @@ footer.entry-meta a { color: #c6a68e; }
 }
 
 .tab-pane { margin-top: 24px; } 
-  
+ 
+#guide-accordion .panel { border: 0 none; background-color: transparent; }
+#guide-accordion .panel-heading { border-radius: 0; padding: 0; background-color: transparent; }
+#guide-accordion .panel-body { padding: 0; padding-top: 24px; border: none;}
+#guide-accordion .panel-heading a { font-family: Amaranth, Lato, "Open Sans", Arial, sans-serif; font-size: 26px; padding: 0;}
+
 fieldset.benchmark-filter { border-bottom: 1px solid #e8ddd4; padding-bottom: 24px; }
 
 /* Clearing */
