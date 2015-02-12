@@ -38,7 +38,7 @@ function blunderbus_setup() {
 	add_theme_support( 'post-thumbnails' );
 
 
-		 * Enable support for Post Formats
+		 /* Enable support for Post Formats
 		*/
 		add_theme_support( 'post-formats', array( 'aside', 'image', 'video', 'quote', 'link' ) );
 
@@ -67,7 +67,7 @@ function blunderbus_setup() {
 		'primary'  => __( 'Header bottom menu', 'blunderbus' ),
 	) );
 
-}
+
 endif; // blunderbus_setup
 add_action( 'after_setup_theme', 'blunderbus_setup' );
 
