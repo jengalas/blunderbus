@@ -178,7 +178,7 @@ return $attr['before'] . $modified . $attr['after'];
 }
 
 /**
- * Show drafts in parent post selection (WP-Types).
+ * Show drafts in parent post selection (WP-Types). 
 
 
 add_filter( 'wpcf_pr_belongs_post_status', 'my_wpcf_pr_belongs_post_status' );
@@ -186,4 +186,5 @@ add_filter( 'wpcf_pr_belongs_post_status', 'my_wpcf_pr_belongs_post_status' );
    {
        $statuses[] = 'draft';
        return $statuses;
-   } */
+   }
+*/
