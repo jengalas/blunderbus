@@ -26,14 +26,35 @@ _s (or Underscores) http://underscores.me/, (C) 2012-2013 Automattic, Inc. Twitt
 
 /* My Minimal WordPress Styling comes here */
 
+html {
+    min-height: 100%;
+    position: relative;
+}
 
 body {
-	word-wrap: break-word;  /* This is a small security for too-long titles */
-	color: #6f6361;
-	background-color: #fffdf9;
-	font-family: "Open Sans", Helvetica, Arial, sans-serif;
-	font-size: 16px;
-	line-height: 1.5;
+  word-wrap: break-word;  /* This is a small security for too-long titles */
+  color: #6f6361;
+  background-color: #fffdf9;
+  font-family: "Open Sans", Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  margin-bottom: 250px;
+}
+
+footer.site-footer {
+    bottom: 0;
+    height: 250px; /* fixed height of footer */
+    position: absolute;
+    width: 100%;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1200px) {
+    footer.site-footer {
+       height: 500px;
+    }
+    body {
+       margin-bottom: 500px;
+    }
 }
 
 @media screen and (min-width: 1170px) {
@@ -46,61 +67,61 @@ p + ol { margin-top: -20px; }
 
 ul { padding-left: 0 }
 
-ul.ngs-reports > li { 
-	margin-bottom: 10px; 
+ul.ngs-reports > li {
+  margin-bottom: 10px;
 }
 
-ul.ngs-reports > li a { 
-	font-size: 90%; 
+ul.ngs-reports > li a {
+  font-size: 90%;
 }
 
 .resource-list dt {
-	font-weight: normal;
-	padding-top: 8px;
+  font-weight: normal;
+  padding-top: 8px;
 }
 
 .resource-list dd {
-	font-size: 90%;
-	border-bottom: 1px solid #f7f3ef;
-	padding-bottom: 8px;
+  font-size: 90%;
+  border-bottom: 1px solid #f7f3ef;
+  padding-bottom: 8px;
 }
 
 .resource-list dt + dd:not(:empty) {
-	padding-top: 5px;
+  padding-top: 5px;
 }
 
 .glossary dd {
-	padding-bottom: 16px;
+  padding-bottom: 16px;
 }
 
 @media screen and (min-width: 760px) {
-	.glossary dt {
-	width: 300px;
-	white-space: normal;
-	}
+  .glossary dt {
+  width: 300px;
+  white-space: normal;
+  }
 
 .glossary dd {
-	margin-left: 330px;
-	}
+  margin-left: 330px;
+  }
 }
 
 .researched_value { color: #ff0000;}
 
 /* Alignment */
 .alignleft {
-	display: inline;
-	float: left;
-	margin-right: 1.5em;
+  display: inline;
+  float: left;
+  margin-right: 1.5em;
 }
 .alignright {
-	display: inline;
-	float: right;
-	margin-left: 1.5em;
+  display: inline;
+  float: right;
+  margin-left: 1.5em;
 }
 .aligncenter {
-	clear: both;
-	display: block;
-	margin: 0 auto;
+  clear: both;
+  display: block;
+  margin: 0 auto;
 }
 
 .full { width: 100%; }
@@ -109,77 +130,77 @@ ul.ngs-reports > li a {
 
 /* Images and wp-captions should always fit and be responsive */
 img {
-	display: inline-block;
-	height: auto;
-	max-width: 100%;
-	padding: 4px;
-	box-shadow: 0 1px 2px #999999;
+  display: inline-block;
+  height: auto;
+  max-width: 100%;
+  padding: 4px;
+  box-shadow: 0 1px 2px #999999;
 }
 img[class*="wp-image-"] {
-	margin-top: 10px;
-	margin-bottom: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 .wp-caption {
-	margin-bottom: 10px;
+  margin-bottom: 10px;
   max-width: 100%;
-	padding: 0 10px;
-	font-family: Arial, sans-serif;
-	font-size: 80%;
-	font-style: italic;
+  padding: 0 10px;
+  font-family: Arial, sans-serif;
+  font-size: 80%;
+  font-style: italic;
 }
 
 .wp-caption-landmark {
-	height: 260px;
+  height: 260px;
 }
 
 .wp-caption-text {
-	margin-bottom: 15px;
+  margin-bottom: 15px;
 }
 
 .wp-caption.aligncenter {
-	margin-bottom: 10px;
+  margin-bottom: 10px;
 }
 .wp-caption img[class*="wp-image-"] {
-	display: block;
+  display: block;
 }
 .wp-caption .wp-caption-text {
-	text-align: center;
-	margin-top: 10px;
+  text-align: center;
+  margin-top: 10px;
 }
 
 #fancybox-title-over { margin: 5px; }
 
 .search-result-image { float: left; margin-right: 20px; margin-bottom: 24px; }  /* Featured image in WordPress Archive View  */
 
-.filetype-icon { 
-	border: 0 none;
-	padding: 0; 
-	margin-right: 5px; 
-	box-shadow: none;
-	vertical-align: top;
+.filetype-icon {
+  border: 0 none;
+  padding: 0;
+  margin-right: 5px;
+  box-shadow: none;
+  vertical-align: top;
 }
 
 /* WP Gallery */
 .gallery {
-	margin-bottom: 1.5em;
+  margin-bottom: 1.5em;
 }
 .gallery a img {
-	border: none;
-	height: auto;
-	max-width: 90%;
+  border: none;
+  height: auto;
+  max-width: 90%;
 }
 .gallery dd {
-	margin: 0;
+  margin: 0;
 }
 .gallery-caption {
-	display: block;
+  display: block;
 }
 
 /* Make sure embeds and iframes fit their containers */
 embed,
 iframe,
 object {
-	max-width: 100%;
+  max-width: 100%;
 }
 
 iframe { border: 0 none; }
@@ -187,41 +208,41 @@ iframe { border: 0 none; }
 
 /* Text meant only for screen readers */
 .screen-reader-text {
-	clip: rect(1px, 1px, 1px, 1px);
-	position: absolute !important;
+  clip: rect(1px, 1px, 1px, 1px);
+  position: absolute !important;
 }
 .screen-reader-text:hover,
 .screen-reader-text:active,
 .screen-reader-text:focus {
-	background-color: #f1f1f1;
-	border-radius: 3px;
-	box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
-	clip: auto !important;
-	color: #21759b;
-	display: block;
-	font-size: 14px;
-	font-weight: bold;
-	height: auto;
-	left: 5px;
-	line-height: normal;
-	padding: 15px 23px 14px;
-	text-decoration: none;
-	top: 5px;
-	width: auto;
-	z-index: 100000; /* Above WP toolbar */
+  background-color: #f1f1f1;
+  border-radius: 3px;
+  box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+  clip: auto !important;
+  color: #21759b;
+  display: block;
+  font-size: 14px;
+  font-weight: bold;
+  height: auto;
+  left: 5px;
+  line-height: normal;
+  padding: 15px 23px 14px;
+  text-decoration: none;
+  top: 5px;
+  width: auto;
+  z-index: 100000; /* Above WP toolbar */
 }
 
 /* Header */
 
-#masthead { 
-	background-attachment: fixed;
+#masthead {
+  background-attachment: fixed;
     background-position: center 40px;
     background-repeat: no-repeat;
     height: 280px;
     margin-top: 50px;
-    position: relative; 
+    position: relative;
     display: block;
-}   
+}
 
 /** Masthead won't display on narrower screen widths **/
 
@@ -248,27 +269,27 @@ iframe { border: 0 none; }
 
 
 .main-content-inner {
-	padding-bottom: 1.5em;
+  padding-bottom: 1.5em;
 }
 .hentry {
-	margin: 0 0 1.5em;
+  margin: 0 0 1.5em;
 }
 .sticky {
-	display: block;
+  display: block;
 }
 .bypostauthor {
-	display: block;
+  display: block;
 }
 
 /* Google map display on survey mark pages */
 
 @media screen and (max-width: 800px) {
-	.small-map { position: relative; padding-bottom: 75%; height: 0; overflow: hidden; } 
-	.small-map iframe {  position: absolute; top: 0; left: 0; width: 100% !important; height: 100% !important; }
+  .small-map { position: relative; padding-bottom: 75%; height: 0; overflow: hidden; }
+  .small-map iframe {  position: absolute; top: 0; left: 0; width: 100% !important; height: 100% !important; }
 }
 
 @media screen and (min-width: 800px) {
-.small-map { float: right; margin: 0 0 20px 20px;} 
+.small-map { float: right; margin: 0 0 20px 20px;}
 }
 
 h1, h2, h3, h4 { color: #9c3782; color: #7ba60d; font-family: Amaranth, Lato, "Open Sans", Arial, sans-serif; /*font-style: italic; font-weight: bold; */clear: both; margin-top: 30px;}
@@ -283,7 +304,7 @@ h3, .h3 { font-size: 22px; }
 
 h3.widget-title { color: #c6a68e; font-family: Raleway,"Open Sans",sans-serif; font-size: 20px; text-transform: uppercase; font-weight: normal; font-style: normal;}
 
-.page-header { border-bottom: none; } 
+.page-header { border-bottom: none; }
 
 a { color: #8b6549; color: #7ba60d;}
 a:hover, a:focus { color: #b69176; color: #557109; text-decoration: underline; }
@@ -311,7 +332,7 @@ footer.entry-meta a { color: #c6a68e; }
 .thumbnail > img, .thumbnail a > img { margin-left: 0; }
 
 #content .attachment-thumbnail, #content img.wp-post-image { padding: 4px; } /* Thumbnails on recoveries pages and RMs */
-    
+
 #tooltip { font-size: 16px; padding: 3px; background: #222 !important; }
 
 .wp-tab-active { border-bottom: none; }
@@ -319,14 +340,14 @@ footer.entry-meta a { color: #c6a68e; }
 .panel { box-shadow: none; border-color: #e8ddd4; border-radius: 3px; }
 .panel-footer, .panel-default > .panel-heading { border-color: #e8ddd4; background-color: #f8f5f2;}
 .panel-group .panel {
-	border-radius: 2px;
+  border-radius: 2px;
 }
 .panel-group .panel-heading + .panel-collapse .panel-body {
     border-top: 1px solid #f3eee9;
 }
 
-.tab-pane { margin-top: 24px; } 
- 
+.tab-pane { margin-top: 24px; }
+
 #guide-accordion .panel { border: 0 none; background-color: transparent; }
 #guide-accordion .panel-heading { border-radius: 0; padding: 0; background-color: transparent; }
 #guide-accordion .panel-body { padding: 0; padding-top: 24px; border: none;}
@@ -336,7 +357,7 @@ fieldset.benchmark-filter { border-bottom: 1px solid #e8ddd4; padding-bottom: 24
 
 /* Clearing */
 .clear {
-	clear: both;
+  clear: both;
 }
 
 /* Navigation */
@@ -374,9 +395,9 @@ ul#main-menu { float: right; }
         box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
     }
     .navbar-fixed-top {
-		top: 0;
-		border-width: 0 0 1px;
-	}
+    top: 0;
+    border-width: 0 0 1px;
+  }
     .navbar-collapse.collapse {
         display: none!important;
     }
@@ -388,12 +409,12 @@ ul#main-menu { float: right; }
         padding-bottom: 10px;
     }
     .collapse.in{
-  		display:block !important;
-	}
+      display:block !important;
+  }
     .navbar-collapse.in {
         overflow-y: auto !important;
     }
-	.navbar-nav .open .dropdown-menu {
+  .navbar-nav .open .dropdown-menu {
         position: static;
         float: none;
         width: auto;
@@ -408,13 +429,13 @@ ul#main-menu { float: right; }
     .navbar-inverse .navbar-nav .open .dropdown-menu>li>a {
         color: #999;
     }
-    .navbar-inverse .navbar-nav .open .dropdown-menu>li>a:hover, 
+    .navbar-inverse .navbar-nav .open .dropdown-menu>li>a:hover,
     .navbar-inverse .navbar-nav .open .dropdown-menu>li>a:focus {
         color: #fff;
         background-color: transparent;
         background-image:none;
     }
-} 
+}
 
 .navbar { border-radius: 0; border-left: none; border-right: none; }
 .navbar .navbar-nav > .active > a:hover,.navbar .navbar-nav > li > a:hover, .navbar .navbar-nav > li > a:focus { background-color: #825E65; }
@@ -442,7 +463,7 @@ ul#main-menu { float: right; }
 .nav-tabs { border-bottom: 1px solid #e8ddd4; }
 
 .nav-tabs.recovery-log-tabs, .nav-tabs.resources-tabs > li.active {
-	margin-bottom: -2px;
+  margin-bottom: -2px;
 }
 
 .nav-tabs.recovery-log-tabs > li.active > a, .nav-tabs.recovery-log-tabs > li.active > a:hover, .nav-tabs.recovery-log-tabs > li.active > a:focus, .nav-tabs.recovery-log-tabs > li > a:active, .nav-tabs.resources-tabs > li.active > a, .nav-tabs.resources-tabs > li.active > a:hover, .nav-tabs.resources-tabs > li.active > a:focus, .nav-tabs.resources-tabs > li > a:active {
@@ -469,7 +490,7 @@ ul#main-menu { float: right; }
 .btn-primary:focus,
 .btn-primary:active,
 .btn-primary.active {
-  background-color: #a8868d; 
+  background-color: #a8868d;
   border-color: #a8868d;
 }
 
@@ -531,7 +552,7 @@ footer .nav > li > a:hover, footer .nav > li > a:focus { background-color: trans
 
 /* Make sure select elements fit in widgets */
 .widget select {
-	max-width: 100%;
+  max-width: 100%;
 }
 
 /* Nested comments? They are threaded and nested already, you just need to add your own styling to finalize!
@@ -558,43 +579,43 @@ footer .nav > li > a:hover, footer .nav > li > a:focus { background-color: trans
 /*  USGS datasheet map styles  */
 
 .usgs-container {
-	overflow: auto;
+  overflow: auto;
 }
 
 table.USGS_quads { font-size: 90%; }
 
 td.USGS_quads {
-	border: 1px solid #400080;
-	padding: 10px;
-	height: 100px;
-	width: 100px;
+  border: 1px solid #400080;
+  padding: 10px;
+  height: 100px;
+  width: 100px;
 }
 
 td.lat_coordinate_grid {
-	border-top: 0;
-	border-left: 0;
-	border-bottom: 1px dashed #400080;
-	border-right: 1px solid #400080;
-	text-align: right;
-	vertical-align: bottom;
-	font-size: 80%;
-	padding-right: 2px;
+  border-top: 0;
+  border-left: 0;
+  border-bottom: 1px dashed #400080;
+  border-right: 1px solid #400080;
+  text-align: right;
+  vertical-align: bottom;
+  font-size: 80%;
+  padding-right: 2px;
 }
 
 td.long_coordinate_grid {
-	border-top: 1px solid #400080;
-	border-left: 0;
-	border-bottom: 0;
-	border-right: 1px dashed #400080;
-	text-align: right;
-	vertical-align: top;
-	font-size: 80%;
-	padding-right: 5px;
-	padding-top: 5px;
+  border-top: 1px solid #400080;
+  border-left: 0;
+  border-bottom: 0;
+  border-right: 1px dashed #400080;
+  text-align: right;
+  vertical-align: top;
+  font-size: 80%;
+  padding-right: 5px;
+  padding-top: 5px;
 }
 
 td.usgs_empty {
-	border: 0 none;
+  border: 0 none;
 }
 
 /*
@@ -628,7 +649,7 @@ td.usgs_empty {
 /*
 .infinite-scroll .page-links,
 .infinite-scroll.neverending .site-footer {
-	display: none;
+  display: none;
 }
 */
 
@@ -636,7 +657,7 @@ td.usgs_empty {
 
 /*
 .infinity-end.neverending .site-footer {
-	display: block;
+  display: block;
 }
 */
 
