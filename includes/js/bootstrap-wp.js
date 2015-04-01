@@ -1,5 +1,7 @@
 jQuery( document ).ready( function( $ ) {
 
+    fakewaffle.responsiveTabs(['xs', 'sm']);
+
     $( 'input.search-field' ).addClass( 'form-control' );
 
     // here for each comment reply link of wordpress

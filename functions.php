@@ -141,11 +141,11 @@ function blunderbus_scripts() {
 	// load bootstrap css
 	wp_enqueue_style( 'blunderbus-bootstrap', get_template_directory_uri() . '/includes/resources/bootstrap/css/bootstrap.min.css' );
 
-	
+
 
 	// load Font Awesome css
 	wp_enqueue_style( 'blunderbus-font-awesome', get_template_directory_uri() . '/includes/css/font-awesome.min.css', false, '4.1.0' );
-	
+
         // load Blunderbus styles
 	wp_enqueue_style( 'blunderbus-style', get_stylesheet_uri() );
 
@@ -171,7 +171,7 @@ add_action( 'wp_enqueue_scripts', 'blunderbus_scripts' );
 /** Add search form to menu **/
 
 add_filter('wp_nav_menu_items', 'add_search_form', 10, 2);
- 
+
  function add_search_form($items, $args) {
           if( $args->theme_location == 'primary' )
           $items .= '<li class="search">'.get_search_form(false).'</li>';
@@ -221,6 +221,19 @@ require get_template_directory() . '/includes/jetpack.php';
  */
 require get_template_directory() . '/includes/bootstrap-wp-navwalker.php';
 
+/**
+ * Load responsive tabs.
+ */
+function my_responsive_tabs() {
+	wp_enqueue_script(
+		'custom-script',
+		get_stylesheet_directory_uri() . '/includes/js/responsive-tabs.js',
+		array( 'jquery' )
+	);
+}
+
+add_action( 'wp_enqueue_scripts', 'my_responsive_tabs' );
+
 require_once("google-map.php");
-	 
+
 
