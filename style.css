@@ -574,7 +574,23 @@ footer .nav > li > a:hover, footer .nav > li > a:focus { background-color: trans
 
 }
 
- #commentform input[type="text"] { width: 40%; }
+ #commentform input[type="text"] {
+  width: 40%;
+}
+
+@media screen and (max-width: 1000px) {
+   #commentform input[type="text"] {
+    width: 100%;
+  }
+
+  div.frm_form_fields div.frm_top_container, div.frm_form_fields div.frm_hidden_container {
+    width: 100% !important;
+  }
+
+  div#frm_field_8_container {
+    margin-bottom: 0;
+  }
+}
 
 /*  USGS datasheet map styles  */
 
@@ -618,6 +634,19 @@ td.usgs_empty {
   border: 0 none;
 }
 
+.recovery-links br {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+    .recovery-links br {
+    display: inline;
+  }
+
+  .avatar {
+    display: none;
+  }
+}
 /*
  == Quick CSS styling tips ==
 
