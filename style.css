@@ -20,10 +20,6 @@ _s (or Underscores) http://underscores.me/, (C) 2012-2013 Automattic, Inc. Twitt
 
 */
 
-
-
-
-
 /* My Minimal WordPress Styling comes here */
 
 html {
@@ -670,7 +666,7 @@ td.usgs_empty {
 
 
  == Infinite Scrolling by Jetpack ==
- You can enable this cool feature by simply decommenting the lines below and make sure you use the same classes on the right place in your html..
+ You can enable this cool feature by simply decommenting the lines below and make sure you use the same classes on the right place in your html.
 
 /* Globally hidden elements when Infinite Scroll is supported and in use.
  * Older / Newer Posts Navigation (the pagination, must always be hidden), Theme Footer only when set to scrolling.. */
