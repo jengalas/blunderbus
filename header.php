@@ -35,7 +35,7 @@
 			<!-- Your site title as branding in the menu -->
 			<a class="navbar-brand" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
 	    </div>
-										
+
 		<!-- The WordPress Menu goes here -->
 		<?php wp_nav_menu(
 			array(
@@ -49,7 +49,7 @@
 				'walker' => new wp_bootstrap_navwalker()
 			)
 		); ?>
-					
+
 	</div><!-- .navbar -->
 </nav><!-- .site-navigation -->
 
@@ -58,7 +58,7 @@
 <div class="main-content">
 	<div class="container">
 		<div class="row">
-			<?php 
+			<?php
 			if ( is_page_template('grandcanyonsurvey-page.php')) {
 			    echo '<div id="content" class="main-content-inner col-sm-12 col-md-8">';
 			} else if ( is_page_template('triangulationmanual-page.php')) {

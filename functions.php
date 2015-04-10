@@ -128,6 +128,14 @@ function blunderbus_widgets_init() {
 		'before_title' => '<h3 class="widget-title">',
 		'after_title' => '</h3>',
 		) );
+		register_sidebar(array(
+		'name'=> 'My Slider Widget Area',
+		'id' => 'custom-slider'
+		));
+		register_sidebar(array(
+		'name'=> 'My Custom Widget Area',
+		'id' => 'custom'
+		));
 }
 add_action( 'widgets_init', 'blunderbus_widgets_init' );
 
@@ -150,7 +158,7 @@ function blunderbus_scripts() {
 	wp_enqueue_style( 'blunderbus-style', get_stylesheet_uri() );
 
 	// load bootstrap js
-	wp_enqueue_script('blunderbus-bootstrapjs', get_template_directory_uri().'/includes/resources/bootstrap/js/bootstrap.min.js', array('jquery') );
+	wp_enqueue_script('blunderbus-bootstrapjs', get_template_directory_uri().'/includes/resources/bootstrap/js/bootstrap.min.js', array('jquery'), true );
 
 	// load bootstrap wp js
 	wp_enqueue_script( 'blunderbus-bootstrapwp', get_template_directory_uri() . '/includes/js/bootstrap-wp.js', array('jquery') );

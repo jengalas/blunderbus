@@ -240,7 +240,7 @@ iframe { border: 0 none; }
   background-attachment: fixed;
     background-position: center 40px;
     background-repeat: no-repeat;
-    height: 280px;
+    height: 215px;
     margin-top: 50px;
     position: relative;
     display: block;
@@ -298,6 +298,8 @@ h1, h2, h3, h4 { color: #9c3782; color: #7ba60d; font-family: Amaranth, Lato, "O
 
 h1, .h1 { font-size: 32px; }
 
+article.type-surveymarks h1.page-title { margin-bottom: 30px; }
+
 h2, .h2 { font-size: 26px; }
 
 h2.entry-title { font-size: 24px; }
@@ -311,7 +313,7 @@ h3.widget-title { color: #c6a68e; font-family: Raleway,"Open Sans",sans-serif; f
 a { color: #8b6549; color: #7ba60d;}
 a:hover, a:focus { color: #b69176; color: #557109; text-decoration: underline; }
 
-.entry-meta { font-size:80%; }
+.entry-meta { font-size: 80%; margin-bottom: 16px; }
 
 blockquote { border-left: 12px solid #d8d1e3; }
 
