@@ -19,7 +19,12 @@ get_header(); ?>
       </div>
       <?php endif;?>
     </div>
-    <div class="col-md-4 column" style="border: 1px solid blue; height: 500px;">This will be the About section, links to searches, how-to guides, contact, etc.
+    <div class="col-md-4 column">
+    <?php if ( is_active_sidebar( 'custom-about' )): ?>
+    <div class="widget-area">
+      <?php dynamic_sidebar( 'custom-about' ); ?>
+    </div>
+    <?php endif;?>
     </div>
   </div>
   <div class="row clearfix">

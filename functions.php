@@ -136,6 +136,10 @@ function blunderbus_widgets_init() {
 		'name'=> 'My Custom Widget Area',
 		'id' => 'custom'
 		));
+		register_sidebar(array(
+		'name'=> 'My About Widget Area',
+		'id' => 'custom-about'
+		));
 }
 add_action( 'widgets_init', 'blunderbus_widgets_init' );
 
