@@ -91,11 +91,11 @@ add_action( 'wp_enqueue_scripts', 'wpse_google_webfonts' );
  * Puts location taxonomy terms in order State, County, Quad
  */
 
-function order_location_terms() {    
-   	 
-	 $taxonomy_slug = "location";			 
+function order_location_terms() {
+
+	 $taxonomy_slug = "location";
 	 $terms = get_the_terms( $post->ID, $taxonomy_slug);
-	 
+
     // if $terms is not array or it's empty don't proceed
     if ( ! is_array( $terms ) || empty( $terms ) ) {
         return false;
@@ -104,7 +104,7 @@ function order_location_terms() {
     foreach ( $terms as $term ) {
         // if the term has a parent, set the child term as attribute in parent term
         if ( $term->parent != 0 )  {
-            $terms[$term->parent]->child = $term;   
+            $terms[$term->parent]->child = $term;
         } else {
             // record the parent term
             $parent = $term;
@@ -113,19 +113,19 @@ function order_location_terms() {
 
 		$state_link = '/'.$taxonomy_slug.'/'.$parent->slug;
 		$county_link = $state_link .'/' . $parent->child->slug;
-		$quad_link = $county_link . '/' . $parent->child->child->slug; 
-		
+		$quad_link = $county_link . '/' . $parent->child->child->slug;
+
 		return "<a href=$state_link>$parent->name</a> - <a href=$county_link>".$parent->child->name."</a> - <a href=$quad_link>".$parent->child->child->name."</a>";
-		
+
 }
 
 add_shortcode( 'location_tax_inorder', 'order_location_terms' );
 
 function order_location_terms_nolink() {    /*  Puts location taxonomy terms in order State, County, Quad */
-   	 
-	 $taxonomy_slug = "location";			 
+
+	 $taxonomy_slug = "location";
 	 $terms = get_the_terms( $post->ID, $taxonomy_slug);
-	 
+
     // if $terms is not array or it's empty don't proceed
     if ( ! is_array( $terms ) || empty( $terms ) ) {
         return false;
@@ -134,7 +134,7 @@ function order_location_terms_nolink() {    /*  Puts location taxonomy terms in 
     foreach ( $terms as $term ) {
         // if the term has a parent, set the child term as attribute in parent term
         if ( $term->parent != 0 )  {
-            $terms[$term->parent]->child = $term;   
+            $terms[$term->parent]->child = $term;
         } else {
             // record the parent term
             $parent = $term;
@@ -143,10 +143,10 @@ function order_location_terms_nolink() {    /*  Puts location taxonomy terms in 
 
 		$state_link = '/'.$taxonomy_slug.'/'.$parent->slug;
 		$county_link = $state_link .'/' . $parent->child->slug;
-		$quad_link = $county_link . '/' . $parent->child->child->slug; 
-		
+		$quad_link = $county_link . '/' . $parent->child->child->slug;
+
 		return $parent->name .' - '. $parent->child->name .' - '. $parent->child->child->name;
-		
+
 }
 
 add_shortcode( 'location_tax_inorder_nolink', 'order_location_terms_nolink' );
@@ -160,25 +160,38 @@ function my_deregister_heartbeat() {
 	global $pagenow;
 
 	if ( 'post.php' != $pagenow && 'post-new.php' != $pagenow )
-		wp_deregister_script('heartbeat'); 
-} 
+		wp_deregister_script('heartbeat');
+}
 
 /**
  * Outputs Last Modified date; from http://krogsgard.com/2012/create-a-shortcode-to-show-when-a-post-was-last-updated/
  */
 
 add_shortcode( 'entry-modified', 'krogs_entry_modified_shortcode' );
- 
+
 function krogs_entry_modified_shortcode( $attr ) {
- 
+
 $attr = shortcode_atts( array( 'before' => '', 'after' => '', 'format' => get_option( 'date_format' ) ), $attr );
- 
-$modified = '<span class="modified" title="' . sprintf( get_the_modified_time( esc_attr__( 'l, F jS, Y, g:i a', $domain ) ) ) . '">' . sprintf( get_the_modified_time( $attr['format'] ) ) . '</span>'; 
+
+$modified = '<span class="modified" title="' . sprintf( get_the_modified_time( esc_attr__( 'l, F jS, Y, g:i a', $domain ) ) ) . '">' . sprintf( get_the_modified_time( $attr['format'] ) ) . '</span>';
 return $attr['before'] . $modified . $attr['after'];
 }
 
 /**
- * Show drafts in parent post selection (WP-Types). 
+ * Creates shortcode for second featured image URL
+ */
+
+add_shortcode('slider_image', 'slider_image');
+function slider_image() {
+  if( class_exists('Dynamic_Featured_Image') ) {
+      global $dynamic_featured_image;
+      $second_image = $dynamic_featured_image->get_nth_featured_image( 2 );
+      return $second_image['full'];
+  }
+}
+
+/**
+ * Show drafts in parent post selection (WP-Types).
 
 
 add_filter( 'wpcf_pr_belongs_post_status', 'my_wpcf_pr_belongs_post_status' );
