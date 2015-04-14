@@ -294,15 +294,37 @@ iframe { border: 0 none; }
 .small-map { float: right; margin: 0 0 20px 20px;}
 }
 
-h1, h2, h3, h4 { color: #9c3782; color: #7ba60d; font-family: Amaranth, Lato, "Open Sans", Arial, sans-serif; /*font-style: italic; font-weight: bold; */clear: both; margin-top: 30px;}
+h1,
+h2, 
+h3, 
+h4 { 
+  color: #7ba60d; 
+  font-family: Raleway, Lato, "Open Sans", Arial, sans-serif;
+  clear: both; 
+  
+}
+
+h1 { 
+  margin-top: 30px;
+}
 
 h1, .h1 { font-size: 32px; }
 
-article.type-surveymarks h1.page-title { margin-bottom: 30px; }
+article.type-surveymarks h1.page-title { 
+  margin-bottom: 30px; 
+  font-family: Lato, "Open Sans", Arial, sans-serif;
+}
 
 h2, .h2 { font-size: 26px; }
 
-h2.entry-title { font-size: 24px; }
+h2.entry-title { 
+  font-size: 24px;
+  font-family: Lato, "Open Sans", Arial, sans-serif;
+}
+
+h2.comments-title {
+  font-family: Raleway, Lato, "Open Sans", Arial, sans-serif;
+}
 
 h3, .h3 { font-size: 22px; }
 
@@ -328,7 +350,7 @@ ul.bullet li { list-style-type: circle; margin-left: 14px;}
 .noshadow { border: 0 none; box-shadow: none; }
 
 footer a { color: #cf95b9; text-decoration: none; }
-footer .nav > li> a:hover { color: #e0bad1; text-decoration: underline; }
+
 footer.entry-meta a { color: #c6a68e; }
 
 .thumbnail { border: medium none; box-shadow: none; height: 250px; }
@@ -531,8 +553,15 @@ fieldset[disabled] .btn-primary.active {
 .widget { margin-bottom: 2em; }
 .widget_nav_menu ul.sub-menu li, .widget_pages ul.children li { padding-left: 15px; }
 
-footer .nav > li > a { padding: 0; display: inline; }
-footer .nav > li > a:hover, footer .nav > li > a:focus { background-color: transparent; }
+footer .nav > li > a { 
+  padding: 0; display: inline; 
+}
+footer .nav > li > a:hover, footer .nav > li > a:focus { 
+  background-color: transparent; 
+}
+footer .nav > li> a:hover, footer .nav > li > a:active, footer .nav > li > a:focus { 
+  color: #e0bad1; text-decoration: underline; 
+}
 
 /* Hiding the search widget's button in widgets. thats just too old-skool. :) but if you want it back, just delete the next line.
  * Note: you can change the whole appearance of the search_form() function in our searchform.php */
@@ -553,6 +582,10 @@ footer .nav > li > a:hover, footer .nav > li > a:focus { background-color: trans
 .navbar-nav .input-group-btn { display: none; }
 
 .navbar-nav input#srch-term { border-radius: 4px; }
+
+.search-field {
+  font-family: "Open Sans", Arial, sans-serif;
+}
 
 /* Make sure select elements fit in widgets */
 .widget select {
