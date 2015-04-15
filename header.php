@@ -18,7 +18,7 @@
 <?php wp_head(); ?>
 </head>
 
-<body <?php body_class(); ?>>
+<body <?php if (function_exists('body_class')) body_class(); ?>>
 	<?php do_action( 'before' ); ?>
 
 <nav class="site-navigation">

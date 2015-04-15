@@ -16,8 +16,6 @@ This theme is the most seamless and minimalistic integration of Twitter Bootstra
 the _s starter theme from Automattic, the guys behind WordPress.
 
 _s (or Underscores) http://underscores.me/, (C) 2012-2013 Automattic, Inc. Twitter Bootstrap
-
-
 */
 
 /* My Minimal WordPress Styling comes here */
@@ -35,6 +33,19 @@ body {
   font-size: 16px;
   line-height: 1.5;
   margin-bottom: 250px;
+}
+
+body.page-id-12994 {
+  background-color: #cbb7bb !important;
+}
+
+body.page-id-12994 .main-content-inner {
+  background-color: #cbb7bb !important;
+  margin-top: 50px;
+}
+
+body.page-id-12994 header#masthead {
+  display: none;
 }
 
 footer.site-footer {
@@ -103,6 +114,12 @@ ul.ngs-reports > li a {
 
 .researched_value { color: #ff0000;}
 
+caption {
+  color: #6f6361;
+  font-size: 24px;
+  font-weight: 600;
+}
+
 /* Alignment */
 .alignleft {
   display: inline;
@@ -120,9 +137,14 @@ ul.ngs-reports > li a {
   margin: 0 auto;
 }
 
-.full { width: 100%; }
+.full {
+  width: 100%;
+}
 
-.main { max-width: 1170px; margin: 0 auto; }
+.main {
+  max-width: 1170px;
+  margin: 0 auto;
+}
 
 /* Images and wp-captions should always fit and be responsive */
 img {
@@ -170,9 +192,13 @@ img[class*="wp-image-"] {
   margin-top: 10px;
 }
 
-#fancybox-title-over { margin: 5px; }
+#fancybox-title-over {
+  margin: 5px;
+}
 
-.search-result-image { float: left; margin-right: 20px; margin-bottom: 24px; }  /* Featured image in WordPress Archive View  */
+.search-result-image {   /* Featured image in WordPress Archive View  */
+  float: left; margin-right: 20px; margin-bottom: 24px;
+  }
 
 .filetype-icon {
   border: 0 none;
@@ -295,29 +321,31 @@ iframe { border: 0 none; }
 }
 
 h1,
-h2, 
-h3, 
-h4 { 
-  color: #7ba60d; 
+h2,
+h3,
+h4 {
+  color: #7ba60d;
   font-family: Raleway, Lato, "Open Sans", Arial, sans-serif;
-  clear: both; 
-  
+  clear: both;
+
 }
 
-h1 { 
+h1 {
   margin-top: 30px;
 }
 
 h1, .h1 { font-size: 32px; }
 
-article.type-surveymarks h1.page-title { 
-  margin-bottom: 30px; 
+article.type-surveymarks h1.page-title,
+article.type-reference-marks h1.page-title
+ {
+  margin-bottom: 30px;
   font-family: Lato, "Open Sans", Arial, sans-serif;
 }
 
 h2, .h2 { font-size: 26px; }
 
-h2.entry-title { 
+h2.entry-title {
   font-size: 24px;
   font-family: Lato, "Open Sans", Arial, sans-serif;
 }
@@ -328,58 +356,130 @@ h2.comments-title {
 
 h3, .h3 { font-size: 22px; }
 
-h3.widget-title { color: #c6a68e; font-family: Raleway,"Open Sans",sans-serif; font-size: 20px; text-transform: uppercase; font-weight: normal; font-style: normal;}
+h3.widget-title {
+  color: #c6a68e;
+  font-family: Raleway,"Open Sans", sans-serif;
+  font-size: 20px;
+  text-transform: uppercase;
+  font-weight: normal;
+  font-style: normal;
+}
 
-.page-header { border-bottom: none; }
+.page-header {
+  border-bottom: none;
+}
 
-a { color: #8b6549; color: #7ba60d;}
-a:hover, a:focus { color: #b69176; color: #557109; text-decoration: underline; }
+a {
+  color: #8b6549;
+  color: #7ba60d;
+}
 
-.entry-meta { font-size: 80%; margin-bottom: 16px; }
+a:hover,
+a:focus {
+  color: #b69176;
+  color: #557109;
+  text-decoration: underline;
+}
 
-blockquote { border-left: 12px solid #d8d1e3; }
+.entry-meta {
+  font-size: 80%;
+  margin-bottom: 16px;
+}
 
-li { list-style-type: none; }
+blockquote {
+  border-left: 12px solid #d8d1e3;
+}
 
-ol.mark-notes li { list-style-type: lower-alpha; }
+li {
+  list-style-type: none;
+}
 
-ol.footnote li { list-style-type: decimal; margin-left: -10px;}
+ol.mark-notes li {
+  list-style-type: lower-alpha;
+}
 
-ul.bullet li { list-style-type: circle; margin-left: 14px;}
+ol.footnote li {
+  list-style-type: decimal;
+  margin-left: -10px;
+}
 
-.noshadow { border: 0 none; box-shadow: none; }
+ul.bullet li {
+  list-style-type: circle;
+  margin-left: 14px;
+}
 
-footer a { color: #cf95b9; text-decoration: none; }
+.noshadow {
+  border: 0 none;
+  box-shadow: none;
+}
 
-footer.entry-meta a { color: #c6a68e; }
+footer a {
+  color: #cf95b9;
+  text-decoration: none;
+}
 
-.thumbnail { border: medium none; box-shadow: none; height: 250px; }
+footer.entry-meta a {
+  color: #c6a68e;
+}
 
-.thumbnail > img, .thumbnail a > img { margin-left: 0; }
+.thumbnail {
+  border: medium none;
+  box-shadow: none;
+  height: 250px; }
 
-#content .attachment-thumbnail, #content img.wp-post-image { padding: 4px; } /* Thumbnails on recoveries pages and RMs */
+.thumbnail > img,
+.thumbnail a > img {
+  margin-left: 0;
+}
 
-#tooltip { font-size: 16px; padding: 3px; background: #222 !important; }
+#content .attachment-thumbnail,   /* Thumbnails on recoveries pages and RMs */
+#content img.wp-post-image {
+  padding: 4px;
+}
 
-.wp-tab-active { border-bottom: none; }
+#tooltip {
+  font-size: 16px;
+  padding: 3px;
+  background: #222 !important;
+}
 
-.panel { box-shadow: none; border-color: #e8ddd4; border-radius: 3px; }
-.panel-footer, .panel-default > .panel-heading { border-color: #e8ddd4; background-color: #f8f5f2;}
+.wp-tab-active {
+  border-bottom: none;
+}
+
+.panel {
+  box-shadow: none;
+  border-color: #e8ddd4;
+  border-radius: 3px;
+}
+
+.panel-footer,
+.panel-default > .panel-heading {
+  border-color: #e8ddd4;
+  background-color: #f8f5f2;
+}
+
 .panel-group .panel {
   border-radius: 2px;
 }
+
 .panel-group .panel-heading + .panel-collapse .panel-body {
     border-top: 1px solid #f3eee9;
 }
 
-.tab-pane { margin-top: 24px; }
+.tab-pane {
+  margin-top: 24px;
+}
 
 #guide-accordion .panel { border: 0 none; background-color: transparent; }
 #guide-accordion .panel-heading { border-radius: 0; padding: 0; background-color: transparent; }
 #guide-accordion .panel-body { padding: 0; padding-top: 24px; border: none;}
 #guide-accordion .panel-heading a { font-family: Amaranth, Lato, "Open Sans", Arial, sans-serif; font-size: 26px; padding: 0;}
 
-fieldset.benchmark-filter { border-bottom: 1px solid #e8ddd4; padding-bottom: 24px; }
+fieldset.benchmark-filter {
+  border-bottom: 1px solid #e8ddd4;
+  padding-bottom: 24px;
+}
 
 /* Clearing */
 .clear {
@@ -388,21 +488,65 @@ fieldset.benchmark-filter { border-bottom: 1px solid #e8ddd4; padding-bottom: 24
 
 /* Navigation */
 
-.dropdown-submenu{position:relative;}
-.dropdown-submenu>.dropdown-menu{top:0;left:100%;-webkit-border-radius:0 6px 6px 6px;-moz-border-radius:0 6px 6px 6px;border-radius:0 6px 6px 6px;}
-.dropdown-submenu:active>.dropdown-menu, .dropdown-submenu:hover>.dropdown-menu {
-display: block;
+.dropdown-submenu {
+  position:relative;
 }
-.dropdown-submenu>a:after{display:block;content:" ";float:right;width:0;height:0;border-color:transparent;border-style:solid;border-width:5px 0 5px 5px;border-left-color:#cccccc;margin-top:5px;margin-right:-10px;}
-.dropdown-submenu:active>a:after{border-left-color:#ffffff;}
-.dropdown-submenu.pull-left{float:none;}.dropdown-submenu.pull-left>.dropdown-menu{left:-100%;margin-left:10px;-webkit-border-radius:6px 0 6px 6px;-moz-border-radius:6px 0 6px 6px;border-radius:6px 0 6px 6px;}
+.dropdown-submenu > .dropdown-menu {
+  top: 0;
+  left: 100%;
+  -webkit-border-radius: 0 6px 6px 6px;
+  -moz-border-radius: 0 6px 6px 6px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:active > .dropdown-menu,
+.dropdown-submenu:hover > .dropdown-menu {
+  display: block;
+}
+.dropdown-submenu > a:after{
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:active > a:after {
+  border-left-color: #ffffff;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left > .dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  -webkit-border-radius: 6px 0 6px 6px;
+  -moz-border-radius: 6px 0 6px 6px;
+  border-radius: 6px 0 6px 6px;
+}
 
 
 /* Navigation */
 
-ul#main-menu { float: right; }
+ul#main-menu {
+  float: right;
+}
 
-.navbar { background-image: none; background-color: #e8ddd4; font-size: 14px; font-family: Raleway, "Open Sans", Arial, sans-serif; margin-bottom: 0; position: fixed; top: 0; width: 100%; z-index: 100;}
+.navbar {
+  background-image: none;
+  background-color: #e8ddd4;
+  font-size: 14px;
+  font-family: Raleway, "Open Sans", Arial, sans-serif;
+  margin-bottom: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+}
 
 /** Top menu will scroll off-screen on narrower screen widths **/
 @media screen and (max-width: 1170px) {
@@ -553,14 +697,14 @@ fieldset[disabled] .btn-primary.active {
 .widget { margin-bottom: 2em; }
 .widget_nav_menu ul.sub-menu li, .widget_pages ul.children li { padding-left: 15px; }
 
-footer .nav > li > a { 
-  padding: 0; display: inline; 
+footer .nav > li > a {
+  padding: 0; display: inline;
 }
-footer .nav > li > a:hover, footer .nav > li > a:focus { 
-  background-color: transparent; 
+footer .nav > li > a:hover, footer .nav > li > a:focus {
+  background-color: transparent;
 }
-footer .nav > li> a:hover, footer .nav > li > a:active, footer .nav > li > a:focus { 
-  color: #e0bad1; text-decoration: underline; 
+footer .nav > li> a:hover, footer .nav > li > a:active, footer .nav > li > a:focus {
+  color: #e0bad1; text-decoration: underline;
 }
 
 /* Hiding the search widget's button in widgets. thats just too old-skool. :) but if you want it back, just delete the next line.
@@ -684,47 +828,3 @@ td.usgs_empty {
     display: none;
   }
 }
-/*
- == Quick CSS styling tips ==
-
- You can start off in a rough direction with some minimal styles.
- See below for some tips. ;)
-
-
- == Want to have the whole site wrapped? ==
-
- Just fill the .container class with some background color to have a the whole site "wrapped".
- This works so easy because every main part is wrapped only once into a container class by bootstrap.
- Try out by decommenting the next line and go from there.
-
- .container { background: #f9f9f9; border-right: 1px solid #eee; border-left: 1px solid #eee; }
-
-
- == Want to wrap just the content and sidebar in Bootstrap style? ==
-
- That one is a great example to show that some things are much cleaner and easier to do via just adding some HTML classes.
- In this case, we will add just one CSS class "panel", look for example at the beginning in content.php!
-
-
- == Infinite Scrolling by Jetpack ==
- You can enable this cool feature by simply decommenting the lines below and make sure you use the same classes on the right place in your html.
-
-/* Globally hidden elements when Infinite Scroll is supported and in use.
- * Older / Newer Posts Navigation (the pagination, must always be hidden), Theme Footer only when set to scrolling.. */
-
-/*
-.infinite-scroll .page-links,
-.infinite-scroll.neverending .site-footer {
-  display: none;
-}
-*/
-
-/* When Infinite Scroll has reached its end we need to re-display elements that were hidden (via .neverending) before */
-
-/*
-.infinity-end.neverending .site-footer {
-  display: block;
-}
-*/
-
-/* Hey, if you don't need my comments anymore, just delete me! :)  */
