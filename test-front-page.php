@@ -7,32 +7,36 @@
  * @package Blunderbus
  */
 
-get_header(); ?>
+get_header("homepage"); ?>
 
   <?php while ( have_posts() ) : the_post(); ?>
 
-  <div class="row clearfix">
-    <div class="col-md-8 column">
-      <?php if ( is_active_sidebar( 'custom-slider' )) :?>
+  <div class="row clearfix" style="background-color: #f8f5f2;">
+    <div class="container" style="background-color: transparent;">
+      <div class="col-md-8 column">
+        <?php if ( is_active_sidebar( 'custom-slider' )) :?>
+        <div class="widget-area">
+          <?php dynamic_sidebar( 'custom-slider' ); ?>
+        </div>
+        <?php endif;?>
+      </div>
+      <div class="col-md-4 column">
+      <?php if ( is_active_sidebar( 'custom-about' )): ?>
       <div class="widget-area">
-        <?php dynamic_sidebar( 'custom-slider' ); ?>
+        <?php dynamic_sidebar( 'custom-about' ); ?>
       </div>
       <?php endif;?>
-    </div>
-    <div class="col-md-4 column">
-    <?php if ( is_active_sidebar( 'custom-about' )): ?>
-    <div class="widget-area">
-      <?php dynamic_sidebar( 'custom-about' ); ?>
-    </div>
-    <?php endif;?>
+      </div>
     </div>
   </div>
   <div class="row clearfix">
-    <?php if ( is_active_sidebar( 'custom' )): ?>
-    <div class="widget-area">
-      <?php dynamic_sidebar( 'custom' ); ?>
+    <div class="container" style="background-color: transparent;">
+      <?php if ( is_active_sidebar( 'custom' )): ?>
+      <div class="widget-area">
+        <?php dynamic_sidebar( 'custom' ); ?>
+      </div>
+      <?php endif;?>
     </div>
-    <?php endif;?>
   </div>
 
     <?php
