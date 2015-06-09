@@ -35,6 +35,8 @@ body {
   margin-bottom: 250px;
 }
 
+/* Special styles for home page */
+
 body.page-id-12994 {
   background-color: #cbb7bb !important;
 }
@@ -47,6 +49,8 @@ body.page-id-12994 .main-content-inner {
 body.page-id-12994 header#masthead {
   display: none;
 }
+
+/* End special styles for home page */
 
 footer.site-footer {
     bottom: 0;
@@ -288,9 +292,19 @@ iframe { border: 0 none; }
 .entry-content { margin-bottom: 50px; }
 
 #footer-sidebar { display:block; height: 250px; }
-#footer-sidebar1 { float: left; width: 340px; margin-left: 5px; margin-right: 5px; }
+/* #footer-sidebar1 { float: left; width: 340px; margin-left: 5px; margin-right: 5px; }
 #footer-sidebar2 { float: left; width: 340px; margin-right: 5px; }
-#footer-sidebar3 { float: left; width: 340px; }
+#footer-sidebar3 { float: left; width: 340px; } */
+
+.copyright {
+  float: right;
+  font-style: italic;
+  color: #c6a68e;
+}
+
+.copyright a:hover {
+  color: #e0bad1;
+}
 
 .site-navigation { }
 .site-navigation-inner { padding-top: 10px; }
@@ -334,7 +348,7 @@ h1 {
   margin-top: 30px;
 }
 
-h1, .h1 { font-size: 32px; }
+h1, .h1 { font-size: 30px; }
 
 article.type-surveymarks h1.page-title,
 article.type-reference-marks h1.page-title
@@ -474,7 +488,7 @@ footer.entry-meta a {
 #guide-accordion .panel { border: 0 none; background-color: transparent; }
 #guide-accordion .panel-heading { border-radius: 0; padding: 0; background-color: transparent; }
 #guide-accordion .panel-body { padding: 0; padding-top: 24px; border: none;}
-#guide-accordion .panel-heading a { font-family: Amaranth, Lato, "Open Sans", Arial, sans-serif; font-size: 26px; padding: 0;}
+#guide-accordion .panel-heading a { font-family: Lato, "Open Sans", Arial, sans-serif; font-size: 26px; padding: 0;}
 
 fieldset.benchmark-filter {
   border-bottom: 1px solid #e8ddd4;
@@ -683,14 +697,14 @@ fieldset[disabled] .btn-primary.active {
   border-color: #9f858a;
 }
 
-/* Overwrite Formidable styles */
+/* Overwrite Formidable styles
 
 .with_frm_style label { font-size: 16px !important; }
 .with_frm_style p.description, .with_frm_style div.description, .with_frm_style .frm_description, .with_frm_style .frm_error { font-size: 16px !important;}
 .with_frm_style .frm_form_fields input, .with_frm_style .frm_form_fields select, .with_frm_style .frm_form_fields textarea{margin-bottom:0 !important;}
 .with_frm_style .frm_form_fields input, #wpcontent .with_frm_style .frm_form_fields select, .with_frm_style .frm_form_fields select, .with_frm_style .frm_form_fields textarea { font-size: 16px !important; width: 100% !important;}
 .with_frm_style .frm_error_style, .with_frm_style .frm_message { font-size: 16px !important;}
-.with_frm_style .frm_message, .with_frm_style .frm_message p { font-size: 16px !important;}
+.with_frm_style .frm_message, .with_frm_style .frm_message p { font-size: 16px !important;} */
 
 /* Here some needed widget styles
  * Most widgets are adapted in the file bootstrap-wp.js - and REALLY easy to modify! ;) */
@@ -828,3 +842,31 @@ td.usgs_empty {
     display: none;
   }
 }
+
+/* Per-post styles */
+
+.postid-12881 div#fancybox-title-over,
+.postid-12891 div#fancybox-title-over,
+.postid-13173 div#fancybox-title-over,
+.postid-13183 div#fancybox-title-over {
+  margin: 0;
+}
+
+/* Per-page styles */
+
+.page-id-12994 .carousel-control.left, .page-id-12994 .carousel-control.right {
+  background-image: none
+}
+
+.page-id-12994 .carousel-inner {
+  background-color: #fff;
+}
+
+.page-id-12994 .carousel-inner img {
+  padding: 1px;
+}
+
+.page-id-12994 #wp_views-17 {
+  padding-top: 3.5em;
+}
+

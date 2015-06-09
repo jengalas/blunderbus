@@ -17,21 +17,21 @@
 		<div class="row">
 			<div class="site-footer-inner col-sm-12">
 				<div id="footer-sidebar" class="secondary">
-					<div id="footer-sidebar1">
+					<div id="footer-sidebar1" class="col-md-4">
 						<?php
 						if(is_active_sidebar('footer-sidebar-1')){
 						dynamic_sidebar('footer-sidebar-1');
 						}
 						?>
 					</div>
-					<div id="footer-sidebar2">
+					<div id="footer-sidebar2" class="col-md-4">
 						<?php
 						if(is_active_sidebar('footer-sidebar-2')){
 						dynamic_sidebar('footer-sidebar-2');
 						}
 						?>
 					</div>
-					<div id="footer-sidebar3">
+					<div id="footer-sidebar3" class="col-md-4">
 						<?php
 						if(is_active_sidebar('footer-sidebar-3')){
 						dynamic_sidebar('footer-sidebar-3');

@@ -190,14 +190,14 @@ add_filter('wp_nav_menu_items', 'add_search_form', 10, 2);
      return $items;
 }
 
-/** Add Read More link to excerpts **/
+/** Add Read More link to excerpts
 
 function excerpt_read_more_link($output) {
  global $post;
  return $output . '<a href="'. get_permalink($post->ID) . '"> Read More...</a>';
 }
 add_filter('the_excerpt', 'excerpt_read_more_link');
-
+**/
 
 /** Prevent compression of JPGs **/
 
