@@ -843,6 +843,48 @@ td.usgs_empty {
   }
 }
 
+#text-5,
+#text-6 {
+  padding-left: 20px;
+}
+
+.col-md-4 > .widget-area {
+  padding-top:22px;
+}
+
+
+.loc2 span {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: inline;
+}
+
+.loc span {
+  float: left;
+  font-size: 80%;
+}
+
+.loc2 span:after {
+    content: ' - ';
+}
+
+.loc2 span:last-child:after {
+    content: "";
+}
+
+.loc span:after {
+    content: ' (';
+}
+
+.loc span {
+    padding: 0;
+}
+
+.loc span:last-child:after {
+    content: ")";
+}
+
 /* Per-post styles */
 
 .postid-12881 div#fancybox-title-over,
@@ -864,6 +906,26 @@ td.usgs_empty {
 
 .page-id-12994 .carousel-inner img {
   padding: 1px;
+}
+
+.page-id-12994 .carousel-caption {
+  background-color: rgba(0, 0, 0, 0.65);
+  padding-left: 20px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  top: auto;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  text-align: left;
+}
+
+.page-id-12994 .carousel-caption .loc {
+  color: #ccc;
+}
+
+.page-id-12994 .carousel-caption > p {
+  margin-bottom: 0;
 }
 
 .page-id-12994 #wp_views-17 {
