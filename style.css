@@ -848,11 +848,6 @@ td.usgs_empty {
   padding-left: 20px;
 }
 
-.col-md-4 > .widget-area {
-  padding-top:22px;
-}
-
-
 .loc2 span {
   list-style: none;
   margin: 0;
@@ -896,6 +891,10 @@ td.usgs_empty {
 
 /* Per-page styles */
 
+.page-id-12994 #main-content-with-carousel {
+  background-image: url(http://surveymarks.planetzhanna.com/wp-content/themes/blunderbus/dust.png);
+}
+
 .page-id-12994 .carousel-control.left, .page-id-12994 .carousel-control.right {
   background-image: none
 }
@@ -909,7 +908,7 @@ td.usgs_empty {
 }
 
 .page-id-12994 .carousel-caption {
-  background-color: rgba(0, 0, 0, 0.65);
+  background-color: rgba(28, 16, 12, 0.65);
   padding-left: 20px;
   padding-top: 8px;
   padding-bottom: 8px;
@@ -930,5 +929,9 @@ td.usgs_empty {
 
 .page-id-12994 #wp_views-17 {
   padding-top: 3.5em;
+}
+
+.page-id-12994 .col-md-3 > .widget-area {
+  padding-top: 40px;
 }
 

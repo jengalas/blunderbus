@@ -11,16 +11,16 @@ get_header("homepage"); ?>
 
   <?php while ( have_posts() ) : the_post(); ?>
 
-  <div class="row clearfix" style="background-color: #f8f5f2;">
+  <div class="row clearfix" id="main-content-with-carousel">
     <div class="container" style="background-color: transparent;">
-      <div class="col-md-8 column">
+      <div class="col-md-9 column">
         <?php if ( is_active_sidebar( 'custom-slider' )) :?>
         <div class="widget-area">
           <?php dynamic_sidebar( 'custom-slider' ); ?>
         </div>
         <?php endif;?>
       </div>
-      <div class="col-md-4 column">
+      <div class="col-md-3 column">
       <?php if ( is_active_sidebar( 'custom-about' )): ?>
       <div class="widget-area">
         <?php dynamic_sidebar( 'custom-about' ); ?>
