@@ -248,4 +248,14 @@ add_action( 'wp_enqueue_scripts', 'my_responsive_tabs' );
 
 require_once("google-map.php");
 
+/**
+ * Enable excerpts for pages.
+ */
+
+function my_add_excerpts_to_pages() {
+     add_post_type_support('page', 'excerpt');
+}
+add_action('init', 'my_add_excerpts_to_pages');
+
+
 
