@@ -12,7 +12,11 @@
   font-weight: $badge-font-weight;
   color: $badge-color;
   line-height: $badge-line-height;
+<<<<<<< HEAD
   vertical-align: baseline;
+=======
+  vertical-align: middle;
+>>>>>>> upstream/master
   white-space: nowrap;
   text-align: center;
   background-color: $badge-bg;
@@ -28,8 +32,14 @@
     position: relative;
     top: -1px;
   }
+<<<<<<< HEAD
   
   .btn-xs & {
+=======
+
+  .btn-xs &,
+  .btn-group-xs > .btn & {
+>>>>>>> upstream/master
     top: 0;
     padding: 1px 5px;
   }
@@ -42,6 +52,7 @@
     color: $badge-active-color;
     background-color: $badge-active-bg;
   }
+<<<<<<< HEAD
   
   .list-group-item > & {
     float: right;
@@ -51,6 +62,17 @@
     margin-right: 5px;
   }
   
+=======
+
+  .list-group-item > & {
+    float: right;
+  }
+
+  .list-group-item > & + & {
+    margin-right: 5px;
+  }
+
+>>>>>>> upstream/master
   .nav-pills > li > a > & {
     margin-left: 3px;
   }

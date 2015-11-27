@@ -38,12 +38,22 @@
 }
 
 
+<<<<<<< HEAD
 // Linked list items
 //
 // Use anchor elements instead of `li`s or `div`s to create linked list items.
 // Includes an extra `.active` modifier class for showing selected items.
 
 a.list-group-item {
+=======
+// Interactive list items
+//
+// Use anchor or button elements instead of `li`s or `div`s to create interactive items.
+// Includes an extra `.active` modifier class for showing selected items.
+
+a.list-group-item,
+button.list-group-item {
+>>>>>>> upstream/master
   color: $list-group-link-color;
 
   .list-group-item-heading {
@@ -59,6 +69,14 @@ a.list-group-item {
   }
 }
 
+<<<<<<< HEAD
+=======
+button.list-group-item {
+  width: 100%;
+  text-align: left;
+}
+
+>>>>>>> upstream/master
 .list-group-item {
   // Disabled state
   &.disabled,

@@ -29,6 +29,13 @@
 
     width: 100%;
     margin-bottom: 0;
+<<<<<<< HEAD
+=======
+    
+    &:focus {
+      z-index: 3;
+    }
+>>>>>>> upstream/master
   }
 }
 
@@ -79,18 +86,30 @@
   text-align: center;
   background-color: $input-group-addon-bg;
   border: 1px solid $input-group-addon-border-color;
+<<<<<<< HEAD
   border-radius: $border-radius-base;
+=======
+  border-radius: $input-border-radius;
+>>>>>>> upstream/master
 
   // Sizing
   &.input-sm {
     padding: $padding-small-vertical $padding-small-horizontal;
     font-size: $font-size-small;
+<<<<<<< HEAD
     border-radius: $border-radius-small;
+=======
+    border-radius: $input-border-radius-small;
+>>>>>>> upstream/master
   }
   &.input-lg {
     padding: $padding-large-vertical $padding-large-horizontal;
     font-size: $font-size-large;
+<<<<<<< HEAD
     border-radius: $border-radius-large;
+=======
+    border-radius: $input-border-radius-large;
+>>>>>>> upstream/master
   }
 
   // Nuke default margins from checkboxes and radios to vertically center within.
@@ -160,6 +179,10 @@
   &:last-child {
     > .btn,
     > .btn-group {
+<<<<<<< HEAD
+=======
+      z-index: 2;
+>>>>>>> upstream/master
       margin-left: -1px;
     }
   }

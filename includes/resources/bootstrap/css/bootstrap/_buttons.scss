@@ -17,7 +17,11 @@
   background-image: none; // Reset unusual Firefox-on-Android default style; see https://github.com/necolas/normalize.css/issues/214
   border: 1px solid transparent;
   white-space: nowrap;
+<<<<<<< HEAD
   @include button-size($padding-base-vertical, $padding-base-horizontal, $font-size-base, $line-height-base, $border-radius-base);
+=======
+  @include button-size($padding-base-vertical, $padding-base-horizontal, $font-size-base, $line-height-base, $btn-border-radius-base);
+>>>>>>> upstream/master
   @include user-select(none);
 
   &,
@@ -47,10 +51,25 @@
   &[disabled],
   fieldset[disabled] & {
     cursor: $cursor-disabled;
+<<<<<<< HEAD
     pointer-events: none; // Future-proof disabling of clicks
     @include opacity(.65);
     @include box-shadow(none);
   }
+=======
+    @include opacity(.65);
+    @include box-shadow(none);
+  }
+
+  // [converter] extracted a& to a.btn
+}
+
+a.btn {
+  &.disabled,
+  fieldset[disabled] & {
+    pointer-events: none; // Future-proof disabling of clicks on `<a>` elements
+  }
+>>>>>>> upstream/master
 }
 
 
@@ -126,6 +145,7 @@
 
 .btn-lg {
   // line-height: ensure even-numbered height of button next to large input
+<<<<<<< HEAD
   @include button-size($padding-large-vertical, $padding-large-horizontal, $font-size-large, $line-height-large, $border-radius-large);
 }
 .btn-sm {
@@ -134,6 +154,16 @@
 }
 .btn-xs {
   @include button-size($padding-xs-vertical, $padding-xs-horizontal, $font-size-small, $line-height-small, $border-radius-small);
+=======
+  @include button-size($padding-large-vertical, $padding-large-horizontal, $font-size-large, $line-height-large, $btn-border-radius-large);
+}
+.btn-sm {
+  // line-height: ensure proper height of button next to small input
+  @include button-size($padding-small-vertical, $padding-small-horizontal, $font-size-small, $line-height-small, $btn-border-radius-small);
+}
+.btn-xs {
+  @include button-size($padding-xs-vertical, $padding-xs-horizontal, $font-size-small, $line-height-small, $btn-border-radius-small);
+>>>>>>> upstream/master
 }
 
 

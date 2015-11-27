@@ -17,9 +17,14 @@
 
 .collapse {
   display: none;
+<<<<<<< HEAD
   visibility: hidden;
 
   &.in      { display: block; visibility: visible; }
+=======
+
+  &.in      { display: block; }
+>>>>>>> upstream/master
   // [converter] extracted tr&.in to tr.collapse.in
   // [converter] extracted tbody&.in to tbody.collapse.in
 }

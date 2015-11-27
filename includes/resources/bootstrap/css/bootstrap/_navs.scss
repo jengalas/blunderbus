@@ -223,11 +223,17 @@
 .tab-content {
   > .tab-pane {
     display: none;
+<<<<<<< HEAD
     visibility: hidden;
   }
   > .active {
     display: block;
     visibility: visible;
+=======
+  }
+  > .active {
+    display: block;
+>>>>>>> upstream/master
   }
 }
 

@@ -67,12 +67,15 @@
     }
 
     // Bootstrap specific changes start
+<<<<<<< HEAD
     //
     // Chrome (OSX) fix for https://github.com/twbs/bootstrap/issues/11245
     // Once fixed, we can just straight up remove this.
     select {
         background: #fff !important;
     }
+=======
+>>>>>>> upstream/master
 
     // Bootstrap components
     .navbar {

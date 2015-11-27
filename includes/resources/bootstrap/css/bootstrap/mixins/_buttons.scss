@@ -8,15 +8,40 @@
   background-color: $background;
   border-color: $border;
 
+<<<<<<< HEAD
   &:hover,
   &:focus,
   &.focus,
+=======
+  &:focus,
+  &.focus {
+    color: $color;
+    background-color: darken($background, 10%);
+        border-color: darken($border, 25%);
+  }
+  &:hover {
+    color: $color;
+    background-color: darken($background, 10%);
+        border-color: darken($border, 12%);
+  }
+>>>>>>> upstream/master
   &:active,
   &.active,
   .open > &.dropdown-toggle {
     color: $color;
     background-color: darken($background, 10%);
         border-color: darken($border, 12%);
+<<<<<<< HEAD
+=======
+
+    &:hover,
+    &:focus,
+    &.focus {
+      color: $color;
+      background-color: darken($background, 17%);
+          border-color: darken($border, 25%);
+    }
+>>>>>>> upstream/master
   }
   &:active,
   &.active,
@@ -26,12 +51,18 @@
   &.disabled,
   &[disabled],
   fieldset[disabled] & {
+<<<<<<< HEAD
     &,
     &:hover,
     &:focus,
     &.focus,
     &:active,
     &.active {
+=======
+    &:hover,
+    &:focus,
+    &.focus {
+>>>>>>> upstream/master
       background-color: $background;
           border-color: $border;
     }

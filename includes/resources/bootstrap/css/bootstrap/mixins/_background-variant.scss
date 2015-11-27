@@ -5,7 +5,12 @@
   #{$parent} {
     background-color: $color;
   }
+<<<<<<< HEAD
   a#{$parent}:hover {
+=======
+  a#{$parent}:hover,
+  a#{$parent}:focus {
+>>>>>>> upstream/master
     background-color: darken($color, 10%);
   }
 }

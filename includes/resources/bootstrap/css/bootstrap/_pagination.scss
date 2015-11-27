@@ -40,6 +40,10 @@
   > li > span {
     &:hover,
     &:focus {
+<<<<<<< HEAD
+=======
+      z-index: 2;
+>>>>>>> upstream/master
       color: $pagination-hover-color;
       background-color: $pagination-hover-bg;
       border-color: $pagination-hover-border;
@@ -51,7 +55,11 @@
     &,
     &:hover,
     &:focus {
+<<<<<<< HEAD
       z-index: 2;
+=======
+      z-index: 3;
+>>>>>>> upstream/master
       color: $pagination-active-color;
       background-color: $pagination-active-bg;
       border-color: $pagination-active-border;
@@ -79,10 +87,18 @@
 
 // Large
 .pagination-lg {
+<<<<<<< HEAD
   @include pagination-size($padding-large-vertical, $padding-large-horizontal, $font-size-large, $border-radius-large);
+=======
+  @include pagination-size($padding-large-vertical, $padding-large-horizontal, $font-size-large, $line-height-large, $border-radius-large);
+>>>>>>> upstream/master
 }
 
 // Small
 .pagination-sm {
+<<<<<<< HEAD
   @include pagination-size($padding-small-vertical, $padding-small-horizontal, $font-size-small, $border-radius-small);
+=======
+  @include pagination-size($padding-small-vertical, $padding-small-horizontal, $font-size-small, $line-height-small, $border-radius-small);
+>>>>>>> upstream/master
 }

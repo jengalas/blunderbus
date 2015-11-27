@@ -4,7 +4,12 @@
 
 
 .jumbotron {
+<<<<<<< HEAD
   padding: $jumbotron-padding ($jumbotron-padding / 2);
+=======
+  padding-top:    $jumbotron-padding;
+  padding-bottom: $jumbotron-padding;
+>>>>>>> upstream/master
   margin-bottom: $jumbotron-padding;
   color: $jumbotron-color;
   background-color: $jumbotron-bg;
@@ -13,7 +18,11 @@
   .h1 {
     color: $jumbotron-heading-color;
   }
+<<<<<<< HEAD
   
+=======
+
+>>>>>>> upstream/master
   p {
     margin-bottom: ($jumbotron-padding / 2);
     font-size: $jumbotron-font-size;
@@ -27,6 +36,11 @@
   .container &,
   .container-fluid & {
     border-radius: $border-radius-large; // Only round corners at higher resolutions if contained in a container
+<<<<<<< HEAD
+=======
+    padding-left:  ($grid-gutter-width / 2);
+    padding-right: ($grid-gutter-width / 2);
+>>>>>>> upstream/master
   }
 
   .container {
@@ -34,7 +48,12 @@
   }
 
   @media screen and (min-width: $screen-sm-min) {
+<<<<<<< HEAD
     padding: ($jumbotron-padding * 1.6) 0;
+=======
+    padding-top:    ($jumbotron-padding * 1.6);
+    padding-bottom: ($jumbotron-padding * 1.6);
+>>>>>>> upstream/master
 
     .container &,
     .container-fluid & {
@@ -44,7 +63,11 @@
 
     h1,
     .h1 {
+<<<<<<< HEAD
       font-size: ($font-size-base * 4.5);
+=======
+      font-size: $jumbotron-heading-font-size;
+>>>>>>> upstream/master
     }
   }
 }

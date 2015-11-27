@@ -19,6 +19,14 @@
 
 .media-object {
   display: block;
+<<<<<<< HEAD
+=======
+
+  // Fix collapse in webkit from max-width: 100% and display: table-cell.
+  &.img-thumbnail {
+    max-width: none;
+  }
+>>>>>>> upstream/master
 }
 
 .media-right,
