@@ -32,7 +32,7 @@ body {
   font-family: "Open Sans", Helvetica, Arial, sans-serif;
   font-size: 16px;
   line-height: 1.5;
-  margin-bottom: 250px;
+  margin-bottom: 300px;
 }
 
 /* Special styles for home page */
@@ -54,7 +54,7 @@ body.page-id-12994 header#masthead {
 
 footer.site-footer {
     bottom: 0;
-    height: 250px; /* fixed height of footer */
+    height: 300px; /* fixed height of footer */
     position: absolute;
     width: 100%;
 }
@@ -885,7 +885,11 @@ td.usgs_empty {
 .postid-12881 div#fancybox-title-over,
 .postid-12891 div#fancybox-title-over,
 .postid-13173 div#fancybox-title-over,
-.postid-13183 div#fancybox-title-over {
+.postid-13183 div#fancybox-title-over,
+.postid-13756 div#fancybox-title-over,
+.postid-13895 div#fancybox-title-over,
+.postid-13912 div#fancybox-title-over,
+.postid-13941 div#fancybox-title-over {
   margin: 0;
 }
 
