@@ -567,7 +567,7 @@ ul#main-menu {
    .navbar { position: relative; }
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1320px) {
     .navbar-header {
         float: none;
     }
@@ -629,8 +629,8 @@ ul#main-menu {
 .dropdown-menu>li>a:hover, .dropdown-menu>li>a:focus { background-color: #7ba60d;}
 .dropdown-menu > li > a:hover, .dropdown-menu>li>a:focus { background-image: none; }
 .dropdown-menu > .active > a, .dropdown-menu > .active > a:hover, .dropdown-menu > .active > a:focus { background-color: #825E65;}
-.navbar .navbar-brand { color: #6d4f54}
-.navbar .navbar-brand:hover { color: #825E65}
+.navbar .navbar-brand { background-color: #a8868d; color: #fff; font-size: 1.75em; }
+.navbar .navbar-brand:hover { background-color: #cbb7bb; color: #825E65}
 .navbar .navbar-nav>li>a { color: #6d4f54}
 .navbar .navbar-nav>li>a:hover, .navbar .navbar-nav>li>a:focus { color: #FFFFFF}
 .navbar .navbar-nav>.active>a,.navbar .navbar-nav>.open>a, .navbar .navbar-nav>.open>a:hover, .navbar .navbar-nav>.open>a:focus { color: #FFFAFA}
@@ -889,7 +889,10 @@ td.usgs_empty {
 .postid-13756 div#fancybox-title-over,
 .postid-13895 div#fancybox-title-over,
 .postid-13912 div#fancybox-title-over,
-.postid-13941 div#fancybox-title-over {
+.postid-13941 div#fancybox-title-over,
+.postid-14013 div#fancybox-title-over,
+.postid-14003 div#fancybox-title-over,
+.postid-14109 div#fancybox-title-over {
   margin: 0;
 }
 
